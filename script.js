@@ -9,6 +9,7 @@ let startX = 0;
 let endX = 0;
 
 // Dot'ları dinamik oluştur
+// Dot'ları dinamik oluştur
 images.forEach((_, i) => {
   const dot = document.createElement('span');
   if (i === 0) dot.classList.add('active');
@@ -26,13 +27,41 @@ function showSlide(i) {
   dots[index].classList.add('active');
 }
 
+// Otomatik geçiş
 setInterval(() => showSlide(index + 1), 5000);
-slides.addEventListener('touchstart', e => startX = e.touches[0].clientX);
-slides.addEventListener('touchend', e => {
-  endX = e.changedTouches[0].clientX;
-  if (startX - endX > 50) showSlide(index + 1);
-  if (endX - startX > 50) showSlide(index - 1);
-});
+
+// 🔥 Mobil dokunma kaydırma desteği
+startX = 0;
+endX = 0;
+
+slides.addEventListener(
+  "touchstart",
+  (e) => {
+    startX = e.touches[0].clientX;
+  },
+  { passive: true }
+);
+
+slides.addEventListener(
+  "touchmove",
+  (e) => {
+    endX = e.touches[0].clientX;
+  },
+  { passive: true }
+);
+
+slides.addEventListener(
+  "touchend",
+  () => {
+    const diff = startX - endX;
+    if (Math.abs(diff) > 50) {
+      if (diff > 0) showSlide(index + 1); // sola kaydır
+      else showSlide(index - 1); // sağa kaydır
+    }
+  },
+  { passive: false }
+);
+
 
 // ================= KATEGORİLER =================
 const categoryButtons = document.querySelectorAll('.categories button');
