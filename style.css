@@ -1079,3 +1079,7 @@ bu blok ile değiştirin veya sadece aşağıdaki tanımı koruyun. */
   vertical-align: middle;
   filter: brightness(0) invert(1); /* beyaz yapar, arka planla uyumlu olur */
 }
+
+.whatsapp-link {
+  color: #23b15c;
+}
