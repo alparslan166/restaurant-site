@@ -31,36 +31,22 @@ function showSlide(i) {
 setInterval(() => showSlide(index + 1), 5000);
 
 // 🔥 Mobil dokunma kaydırma desteği
-startX = 0;
-endX = 0;
+let touchStartX = 0;
+let touchEndX = 0;
 
-slides.addEventListener(
-  "touchstart",
-  (e) => {
-    startX = e.touches[0].clientX;
-  },
-  { passive: true }
-);
-
-slides.addEventListener(
-  "touchmove",
-  (e) => {
-    endX = e.touches[0].clientX;
-  },
-  { passive: true }
-);
-
-slides.addEventListener(
-  "touchend",
-  () => {
-    const diff = startX - endX;
-    if (Math.abs(diff) > 50) {
-      if (diff > 0) showSlide(index + 1); // sola kaydır
-      else showSlide(index - 1); // sağa kaydır
-    }
-  },
-  { passive: false }
-);
+slides.addEventListener("touchstart", (e) => {
+  touchStartX = e.touches[0].clientX;
+});
+slides.addEventListener("touchmove", (e) => {
+  touchEndX = e.touches[0].clientX;
+});
+slides.addEventListener("touchend", () => {
+  const diff = touchStartX - touchEndX;
+  if (Math.abs(diff) > 50) {
+    if (diff > 0) showSlide(index + 1);
+    else showSlide(index - 1);
+  }
+});
 
 
 // ================= KATEGORİLER =================
