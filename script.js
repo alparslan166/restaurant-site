@@ -5,10 +5,7 @@ const slides = document.querySelector('.slides');
 const images = document.querySelectorAll('.slides img');
 const dotsContainer = document.querySelector('.dots');
 let index = 0;
-let startX = 0;
-let endX = 0;
 
-// Dot'ları dinamik oluştur
 // Dot'ları dinamik oluştur
 images.forEach((_, i) => {
   const dot = document.createElement('span');
@@ -17,18 +14,24 @@ images.forEach((_, i) => {
 });
 const dots = document.querySelectorAll('.dots span');
 
+// Slider gösterme fonksiyonu
 function showSlide(i) {
   if (i < 0) index = images.length - 1;
   else if (i >= images.length) index = 0;
   else index = i;
 
+  slides.style.transition = "transform 0.8s ease-in-out"; // yumuşak geçiş
   slides.style.transform = `translateX(${-index * 100}%)`;
+
   dots.forEach(dot => dot.classList.remove('active'));
   dots[index].classList.add('active');
 }
 
-// Otomatik geçiş
-setInterval(() => showSlide(index + 1), 5000);
+// Otomatik geçiş (5 saniye)
+setInterval(() => {
+  showSlide(index + 1);
+}, 5000);
+
 
 // 🔥 Mobil dokunma kaydırma desteği
 
