@@ -38,7 +38,7 @@ export const kategoriVerisi = {
       malzemeler: ["Pepperoni", "Mozzarella", "Domates"], 
       extras: [
         { isim: "Ekstra Peynir", fiyat: "10₺", resim: "./img/peynir.jpg" },
-        { isim: "Patates Kızartması", fiyat: "15₺", resim: "./img/patates.jpg" }
+        { isim: "Patates Kızartması", fiyat: "15₺", resim: "./img/patates.jpeg" }
       ]
     }
   ],
@@ -116,7 +116,7 @@ export const kategoriVerisi = {
 
 
 
-  
+
   içecekler:[
 
 
