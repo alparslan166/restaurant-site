@@ -909,3 +909,24 @@ body {
   object-fit: cover;
   flex-shrink: 0;
 }
+.product-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* 🔥 ekledik */
+  padding: 15px;
+  max-width: 600px;
+  margin: 0 auto; /* 🔥 tam ortalama */
+  text-align: center;
+  background: #b2ac5d;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Ana içerik de ortalı kalsın */
+#main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
