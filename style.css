@@ -1046,6 +1046,7 @@ bu blok ile değiştirin veya sadece aşağıdaki tanımı koruyun. */
   box-sizing: border-box;
   /* ... (Diğer stilleriniz) ... */
 }
+
 .footer-links {
   margin-top: 10px;
   display: flex;
@@ -1059,9 +1060,10 @@ bu blok ile değiştirin veya sadece aşağıdaki tanımı koruyun. */
   text-decoration: none;
   font-weight: 500;
   display: flex;
-  align-items: center;
-  gap: 8px;
+  align-items: center; /* ikon ve yazıyı ortalar */
+  gap: 8px; /* aralarındaki boşluk */
   transition: 0.3s ease;
+  font-size: 16px; /* yazı boyutu */
 }
 
 .footer-links a:hover {
@@ -1069,11 +1071,11 @@ bu blok ile değiştirin veya sadece aşağıdaki tanımı koruyun. */
   color: #ffcf70;
 }
 
-/* WhatsApp ikonu */
+/* WhatsApp ikonu — yazı boyutuna orantılı */
 .whatsapp-icon {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background-color: white;
-  padding: 2px;
+  width: 18px; /* yazı boyutuna uygun */
+  height: 18px;
+  object-fit: contain;
+  vertical-align: middle;
+  filter: brightness(0) invert(1); /* beyaz yapar, arka planla uyumlu olur */
 }
