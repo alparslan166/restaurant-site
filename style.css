@@ -405,7 +405,7 @@ header {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   margin: 40px auto;
   padding: 30px 20px;
-  max-width: 800px;
+  max-width: 850px;
   text-align: center;
   color: #fff7e6; /* 🔥 sıcak beyaz */
 }
@@ -945,10 +945,104 @@ body {
   width: 90%;
 }
 
+/* ========================================= */
+/* ÜRÜN KARTLARI */
+/* ========================================= */
 #main-content {
+  display: grid;
+  /* 🔥 Değişiklik burada: 'auto-fill, minmax(160px, 1fr)' yerine 'repeat(2, 1fr)' kullanıldı */
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  padding: 20px;
+  /* ✨ Ekstra: Eğer mobil cihazlarda padding çok gelirse */
+  padding: 10px;
+}
+/* ... geri kalan ürün kartı stilleri ... */
+/* ========================================= */
+/* 🎯 Ürün Detay Sayfası Ortalama Düzeltmesi */
+/* ========================================= */
+.product-detail {
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  position: relative;
+  transform: none;
+  /* 🔥 Değişiklik burada: Genişliği #about kısmının genişliğiyle eşitleyelim */
+  max-width: 850px; /* #about kısmındaki max-width değerini kullanıyoruz */
+  width: 90%;
+  padding: 25px; /* Belki biraz daha fazla iç boşluk verebiliriz, isteğe bağlı */
+}
+
+/* ... (Geri kalan .product-detail stilleri bozulmadan kalır) ... */
+/* ========================================= */
+/* 🎯 Ürün Detay Sayfası Ortalama Düzeltmesi */
+/* ========================================= */
+.product-detail {
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  position: relative;
+  transform: none;
+
+  /* 🔥 Genişlikler #about ile birebir eşleştirildi */
+  max-width: 90vw; /* #about kısmından alındı */
+  width: calc(100% - 20px); /* #about kısmından alındı */
+
+  padding: 25px;
+}
+/* ========================================= */
+/* ÜRÜN KARTLARI */
+/* ========================================= */
+#main-content {
+  display: grid;
+  /* Tüm ekranlarda 2 sütun zorla */
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  padding: 10px;
+  /* 🔥 Genişlik Kısıtlaması ekledik */
+  max-width: 90vw;
+  width: calc(100% - 20px);
+  margin: 0 auto; /* Ortalamak için */
+}
+/* ========================================= */
+/* ÜRÜN DETAY SAYFASI */
+/* ========================================= */
+/* NOT: Koddaki tüm çakışan .product-detail tanımlarını 
+bu tek ve tutarlı tanım ile değiştirin. */
+.product-detail {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  padding: 25px; /* Daha geniş alan için padding artırıldı */
+
+  /* 🔥 Genişlikler #about ile birebir eşleştirildi */
+  max-width: 90vw;
+  width: calc(100% - 20px);
+
+  margin: 20px auto; /* Üstten/alttan boşluk verip ortala */
+  text-align: center;
+  background: #b2ac5d;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+/* ========================================= */
+/* HAKKIMIZDA */
+/* ========================================= */
+/* NOT: Koddaki 'max-width: 850px;' içeren ilk #about bloğunu 
+bu blok ile değiştirin veya sadece aşağıdaki tanımı koruyun. */
+
+#about {
   width: 100%;
+  /* ... (Arka plan ve görsel stilleriniz) ... */
+  margin: 40px auto;
+  padding: 30px 20px;
+
+  /* 🔥 Genişlikler: Dinamik ve mobil uyumlu. */
+  max-width: 90vw;
+  width: calc(100% - 20px);
+
+  box-sizing: border-box;
+  /* ... (Diğer stilleriniz) ... */
 }
