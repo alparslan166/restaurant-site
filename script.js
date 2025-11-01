@@ -1,50 +1,63 @@
-
-
-// ================= SLIDER =================
-const slides = document.querySelector('.slides');
-const images = document.querySelectorAll('.slides img');
-const dotsContainer = document.querySelector('.dots');
+const slides = document.querySelector(".slides");
+const images = document.querySelectorAll(".slides img");
+const dotsContainer = document.querySelector(".dots");
 let index = 0;
-let startX = 0;
-let endX = 0;
+let autoSlide;
 
-// Dot'ları dinamik oluştur
-// Dot'ları dinamik oluştur
+// Dot’ları oluştur
 images.forEach((_, i) => {
-  const dot = document.createElement('span');
-  if (i === 0) dot.classList.add('active');
+  const dot = document.createElement("span");
+  if (i === 0) dot.classList.add("active");
   dotsContainer.appendChild(dot);
 });
-const dots = document.querySelectorAll('.dots span');
+const dots = document.querySelectorAll(".dots span");
 
 function showSlide(i) {
   if (i < 0) index = images.length - 1;
   else if (i >= images.length) index = 0;
   else index = i;
 
-  slides.style.transform = `translateX(${-index * 100}%)`;
-  dots.forEach(dot => dot.classList.remove('active'));
-  dots[index].classList.add('active');
+  slides.scrollTo({
+    left: slides.clientWidth * index,
+    behavior: "smooth",
+  });
+
+  dots.forEach(dot => dot.classList.remove("active"));
+  dots[index].classList.add("active");
 }
 
-// Otomatik geçiş
-setInterval(() => showSlide(index + 1), 5000);
+// Otomatik kaydırma
+function startAutoSlide() {
+  autoSlide = setInterval(() => showSlide(index + 1), 4000);
+}
+function stopAutoSlide() {
+  clearInterval(autoSlide);
+}
 
-// 🔥 Mobil dokunma kaydırma desteği
-let touchStartX = 0;
-let touchEndX = 0;
+startAutoSlide();
 
+// Dokunma (elle kaydırma)
+let touchStart = 0;
 slides.addEventListener("touchstart", (e) => {
-  touchStartX = e.touches[0].clientX;
+  touchStart = e.touches[0].clientX;
+  stopAutoSlide();
 });
-slides.addEventListener("touchmove", (e) => {
-  touchEndX = e.touches[0].clientX;
-});
-slides.addEventListener("touchend", () => {
-  const diff = touchStartX - touchEndX;
+slides.addEventListener("touchend", (e) => {
+  const diff = touchStart - e.changedTouches[0].clientX;
   if (Math.abs(diff) > 50) {
     if (diff > 0) showSlide(index + 1);
     else showSlide(index - 1);
+  }
+  startAutoSlide();
+});
+
+// Scroll ile manuel kaydırmayı da algıla
+slides.addEventListener("scroll", () => {
+  const newIndex = Math.round(slides.scrollLeft / slides.clientWidth);
+  if (newIndex !== index) {
+    index = newIndex;
+    dots.forEach(dot => dot.classList.remove("active"));
+    dots[index].classList.add("active");
   }
 });
 
