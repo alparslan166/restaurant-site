@@ -1,1 +1,7 @@
-menü kısmına eklenecek tüm resimler 254x198 boyutunda olmalı
+menü kısmına eklenecek tüm resimler 254x198 boyutunda olmal
+
+
+github güncelleme 
+git add .
+git commit -m "güncelleme"
+git push origin main
