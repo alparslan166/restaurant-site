@@ -1077,5 +1077,4 @@ bu blok ile değiştirin veya sadece aşağıdaki tanımı koruyun. */
   height: 18px;
   object-fit: contain;
   vertical-align: middle;
-  filter: brightness(0) invert(1); /* beyaz yapar, arka planla uyumlu olur */
 }

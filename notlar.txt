@@ -1,4 +1,4 @@
-menü kısmına eklenecek tüm resimler 254x198 boyutunda olmal
+menü kısmına eklenecek tüm resimler 254x198 boyutunda olmalı
 
 
 github güncelleme 
@@ -64,6 +64,50 @@ parmak patates 200 gram parmak patates
 soğan halkası 6lı soğan halkası
 
 mısır cipsi özel soslu mısır cipsi
+
+
+
+
+tatlılar
+
+tiramisu
+
+supangle 
+
+puding çilekli çikolatalı muzlu
+
+sütlaç
+
+süt helvası
+
+
+
+
+içecekler
+
+su
+
+coca cola(şişe)
+
+coca cola(kutu)
+
+coca cola şekersiz(şişe)
+
+coca cola şekersiz(kutu)
+
+fanta(şişe)
+
+fanta(kutu)
+
+pepsi
+
+şalgam
+
+ayran(küçük)
+
+ayran(büyük)
+
+şişe ayran
 
 
 

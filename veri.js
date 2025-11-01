@@ -1,5 +1,24 @@
 // veri.js
 export const kategoriVerisi = {
+
+  favoriler: [
+
+
+
+
+
+
+
+
+
+  ],
+
+
+
+
+
+
+
   pizzalar: [
     { 
       isim: "Margarita", 
@@ -23,6 +42,12 @@ export const kategoriVerisi = {
       ]
     }
   ],
+
+
+
+
+
+
   hamburgerler: [
     { 
       isim: "Cheeseburger", 
@@ -43,6 +68,71 @@ export const kategoriVerisi = {
       malzemeler: ["Karbonatlı su", "Şeker"], 
       extras: []
     }
+  ],
+
+
+
+
+
+
+  salatalar:[
+
+
+
+
+
+
+
+
+  ],
+
+
+
+
+
+  atıştırmalıklar:[
+
+
+
+
+
+
+
+  ],
+
+
+
+
+
+
+  tatlılar:[
+
+
+
+
+  ],
+
+
+
+
+
+  
+  içecekler:[
+
+
+
+
+
+
+
   ]
+
+
+
+
+
+
+
+
 };
 
