@@ -227,34 +227,36 @@ window.addEventListener("scroll", () => {
   }
 });
 
-
-
 const infoBanner = document.getElementById('info-banner');
 
+function updateBanner(category) {
+  infoBanner.classList.remove('show');
+  infoBanner.style.display = 'none';
+  infoBanner.textContent = '';
+
+  if (category === 'tatlilar') {
+    infoBanner.textContent = '🍰 Bütün tatlılar 70 TL!';
+    infoBanner.style.display = 'block';
+    requestAnimationFrame(() => infoBanner.classList.add('show'));
+  } 
+  else if (category === 'favoriler') {
+    infoBanner.textContent = '⭐️ EN ÇOK SATANLAR!!';
+    infoBanner.style.display = 'block';
+    requestAnimationFrame(() => infoBanner.classList.add('show'));
+  }
+}
+
+// 🔸 Butonlara tıklanınca çalıştır
 categoryButtons.forEach(btn => {
   btn.addEventListener('click', () => {
-    // Önce eski yazıyı gizle
-    infoBanner.style.display = 'none';
-    infoBanner.textContent = '';
-
-    // Eğer tıklanan buton tatlılar ise göster
-    if (btn.dataset.category === 'tatlilar') {
-      infoBanner.textContent = '🍰 Bütün tatlılar 70 TL!';
-      infoBanner.style.display = 'block';
-      requestAnimationFrame(() => infoBanner.classList.add('show'));
-
-    // 🍀 Favoriler için ekledik
-    } else if (btn.dataset.category === 'favoriler') {
-      infoBanner.textContent = '⭐️ EN ÇOK SATANLAR!!';
-      infoBanner.style.display = 'block';
-      requestAnimationFrame(() => infoBanner.classList.add('show'));
-
-    } else {
-      infoBanner.classList.remove('show');
-      setTimeout(() => (infoBanner.style.display = 'none'), 400);
-    }
+    currentCategory = btn.dataset.category;
+    updateBanner(currentCategory);
   });
 });
+
+// 🔸 Sayfa ilk yüklendiğinde aktif kategoriye göre başlat
+updateBanner(currentCategory);
+
 
 
 
