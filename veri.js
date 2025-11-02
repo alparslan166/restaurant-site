@@ -23,7 +23,7 @@ export const kategoriVerisi = {
     { 
       isim: "Margarita Pizza", 
       resim: "./img/pizzalar/pizzaMargarita.jpeg", 
-      fiyat: "90₺", 
+      fiyat: "250₺", 
       malzemeler: ["Domates", "Mozzarella", "Fesleğen"], 
       extras: [
         { isim: "Ekstra Patates", fiyat: "15₺", resim: "./img/patates.jpeg" },
@@ -36,7 +36,7 @@ export const kategoriVerisi = {
     { 
       isim: "Pepperoni Pizza", 
       resim: "./img/pizzalar/pizzaPepperoni.jpg", 
-      fiyat: "110₺", 
+      fiyat: "370₺", 
       malzemeler: ["Pepperoni", "Mozzarella", "Domates"], 
       extras: [
         { isim: "Ekstra Peynir", fiyat: "10₺", resim: "./img/peynir.jpg" },
@@ -48,7 +48,7 @@ export const kategoriVerisi = {
     { 
       isim: "Karışık Pizza", 
       resim: "./img/pizzalar/pizzaKarisik.jpg", 
-      fiyat: "110₺", 
+      fiyat: "3000₺", 
       malzemeler: ["Pepperoni", "Mozzarella", "Domates", "Mozzarella"], 
       extras: [
         { isim: "Ekstra Peynir", fiyat: "10₺", resim: "./img/peynir.jpg" },
@@ -59,7 +59,7 @@ export const kategoriVerisi = {
     { 
       isim: "Jambonlu Pizza", 
       resim: "./img/pizzalar/pizzaJambon.jpg", 
-      fiyat: "110₺", 
+      fiyat: "510₺", 
       malzemeler: ["Pepperoni", "Mozzarella", "Domates"], 
       extras: [
         { isim: "Ekstra Peynir", fiyat: "10₺", resim: "./img/peynir.jpg" },
@@ -70,7 +70,7 @@ export const kategoriVerisi = {
     { 
       isim: "Muriana Pizza", 
       resim: "./img/pizzalar/pizzaMuriana.jpg", 
-      fiyat: "110₺", 
+      fiyat: "450₺", 
       malzemeler: ["Pepperoni", "Mozzarella", "Domates"], 
       extras: [
         { isim: "Çıtır Peynir", fiyat: "10₺", resim: "./img/citirPeynir.jpeg" },
@@ -81,7 +81,7 @@ export const kategoriVerisi = {
     { 
       isim: "Puglia Pizza", 
       resim: "./img/pizzalar/pizzaPuglia.jpg", 
-      fiyat: "110₺", 
+      fiyat: "375₺", 
       malzemeler: ["Pepperoni", "Mozzarella", "Domates"], 
       extras: [
         { isim: "Ekstra Peynir", fiyat: "10₺", resim: "./img/peynir.jpg" },
