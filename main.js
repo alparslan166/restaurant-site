@@ -81,23 +81,81 @@ function renderMain(category) {
 
 
 // ================= DETAY SAYFASI =================
+// function renderDetail(item) {
+//   mainContent.innerHTML = "";
+
+//   const malzemeListesi = item.malzemeler
+//     .map(m => `<li class="malzeme-item">${m}</li>`)
+//     .join("");
+
+//   const extrasListesi = item.extras.length > 0 
+//     ? item.extras.map(e => `
+//       <div class="extra-option">
+//         <img src="${e.resim}" alt="${e.isim}">
+//         <span class="extra-name">${e.isim}</span>
+//         <span class="extra-price">${e.fiyat}</span>
+//       </div>
+//     `).join("")
+//     : "<p class='no-extra'>Bu ürün için ekstra seçenek bulunmamaktadır.</p>";
+
+//   const detailHTML = `
+//     <div class="product-detail">
+//       <img src="${item.resim}" alt="${item.isim}" class="product-image">
+//       <div class="product-info">
+//         <h2 class="product-name">${item.isim}</h2>
+//         <p class="price">${item.fiyat}</p>
+
+//         <h3 class="section-title">Malzemeler:</h3>
+//         <ul class="malzemeler-list">${malzemeListesi}</ul>
+
+//         <h3 class="section-title">Ekstra Seçenekler:</h3>
+//         <div class="extras-container">${extrasListesi}</div>
+
+//         <button class="back-btn" aria-label="Geri Dön">Geri</button>
+//       </div>
+//     </div>
+//   `;
+
+//   mainContent.innerHTML = detailHTML;
+
+//   // Geri butonu
+//   const backBtn = mainContent.querySelector(".back-btn");
+//   backBtn.addEventListener("click", () => renderMain(currentCategory));
+
+//   // Ekstra ürün butonları (tıklama efekti)
+//   const extrasButtons = mainContent.querySelectorAll(".extra-option");
+//   extrasButtons.forEach(btn => {
+//     btn.addEventListener("click", () => {
+//       btn.classList.toggle("selected");
+//       btn.style.backgroundColor = btn.classList.contains("selected")
+//         ? "#ffeef3"
+//         : "#fafafa";
+//     });
+//   });
+//    mainContent.scrollIntoView({ behavior: "smooth", block: "start" });
+// }
+
 function renderDetail(item) {
   mainContent.innerHTML = "";
 
-  const malzemeListesi = item.malzemeler
+  // Malzemeler
+  const malzemeListesi = (item.malzemeler || [])
     .map(m => `<li class="malzeme-item">${m}</li>`)
     .join("");
 
-  const extrasListesi = item.extras.length > 0 
-    ? item.extras.map(e => `
-      <div class="extra-option">
-        <img src="${e.resim}" alt="${e.isim}">
-        <span class="extra-name">${e.isim}</span>
-        <span class="extra-price">${e.fiyat}</span>
-      </div>
-    `).join("")
-    : "<p class='no-extra'>Bu ürün için ekstra seçenek bulunmamaktadır.</p>";
+  // Ekstra listesi kontrolü — undefined veya boş olabilir
+  const extras = item.extras || []; // yoksa boş dizi ver
+  const extrasListesi = extras.length > 0
+    ? extras.map(e => `
+        <div class="extra-option">
+          <img src="${e.resim}" alt="${e.isim}">
+          <span class="extra-name">${e.isim}</span>
+          <span class="extra-price">${e.fiyat}</span>
+        </div>
+      `).join("")
+    : ""; // Hiçbir şey eklemesin
 
+  // Ana HTML
   const detailHTML = `
     <div class="product-detail">
       <img src="${item.resim}" alt="${item.isim}" class="product-image">
@@ -108,9 +166,11 @@ function renderDetail(item) {
         <h3 class="section-title">Malzemeler:</h3>
         <ul class="malzemeler-list">${malzemeListesi}</ul>
 
-        <h3 class="section-title">Ekstra Seçenekler:</h3>
-        <div class="extras-container">${extrasListesi}</div>
-
+        ${extras.length > 0 ? `
+          <h3 class="section-title">Ekstra Seçenekler:</h3>
+          <div class="extras-container">${extrasListesi}</div>
+        ` : ""}
+        
         <button class="back-btn" aria-label="Geri Dön">Geri</button>
       </div>
     </div>
@@ -122,7 +182,7 @@ function renderDetail(item) {
   const backBtn = mainContent.querySelector(".back-btn");
   backBtn.addEventListener("click", () => renderMain(currentCategory));
 
-  // Ekstra ürün butonları (tıklama efekti)
+  // Ekstra ürün butonları (varsa)
   const extrasButtons = mainContent.querySelectorAll(".extra-option");
   extrasButtons.forEach(btn => {
     btn.addEventListener("click", () => {
@@ -132,9 +192,9 @@ function renderDetail(item) {
         : "#fafafa";
     });
   });
-   mainContent.scrollIntoView({ behavior: "smooth", block: "start" });
-}
 
+  mainContent.scrollIntoView({ behavior: "smooth", block: "start" });
+}
 
 
 const header = document.querySelector("header");
