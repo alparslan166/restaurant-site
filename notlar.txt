@@ -8,6 +8,9 @@ git push origin main
 
 EKLENECEKLER:
 
+
+pizzaPepperoni
+
 Favoriler!
 
 pizzalar - hamburgerler - salatalar - atıştırmalıklar - tatlılar - içecekler 
@@ -21,7 +24,7 @@ Marinara pizza	Domates sos, zeytinyağı, kekik, sarımsak. Napoli, İtalya
 
 Puglia pizzası	Soğan	Puglia, İtalya
 
-Dört peynirli pizza	Dört çeşit peynir: Mozzarella, Gorgonzola ve bölgeye bağlı olarak iki çeşit peynir	Lazio, İtalya
+Dört peynirli pizza	Dört çeşit peynir:, Mozzarella, Gorgonzola ve bölgeye bağlı olarak iki çeşit peynir	Lazio, İtalya
 
 karışık pizza Domates, mozzarella, fesleğen
 
