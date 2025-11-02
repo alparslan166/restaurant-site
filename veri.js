@@ -427,18 +427,72 @@ export const kategoriVerisi = {
 
 
   icecekler:[
-    
     { 
-      isim: "Kola", 
-      resim: "./img/icecek1.jpg", 
+      isim: "Su", 
+      resim: "./img/icecekler/su.jpg", 
       fiyat: "15₺", 
-      malzemeler: ["Karbonatlı su", "Şeker"], 
-      extras: []
+      malzemeler: [], 
     },
-
-
-
-
+    { 
+      isim: "Coca Cola 250ml", 
+      resim: "./img/icecekler/cocaCola250.jpg", 
+      fiyat: "35₺", 
+      malzemeler: [], 
+    },
+    { 
+      isim: "Coca Cola Zero 250ml", 
+      resim: "./img/icecekler/cocaCola0250.jpg", 
+      fiyat: "35₺", 
+      malzemeler: [], 
+    },
+    { 
+      isim: "Coca Cola 330ml", 
+      resim: "./img/icecekler/cocaCola330.jpg", 
+      fiyat: "50₺", 
+      malzemeler: [], 
+    },
+    { 
+      isim: "Coca Cola Zero 330ml", 
+      resim: "./img/icecekler/cocaCola0330.png", 
+      fiyat: "50₺", 
+      malzemeler: [], 
+    },
+    { 
+      isim: "Fanta 250ml", 
+      resim: "./img/icecekler/fanta250.png", 
+      fiyat: "35₺", 
+      malzemeler: [], 
+    },
+    { 
+      isim: "Fanta 330ml", 
+      resim: "./img/icecekler/fanta330.jpeg", 
+      fiyat: "50₺", 
+      malzemeler: [], 
+    },
+    { 
+      isim: "Ayran 200ml", 
+      resim: "./img/icecekler/ayran200.jpg", 
+      fiyat: "25₺", 
+      malzemeler: [], 
+    },
+    { 
+      isim: "Ayran 300ml", 
+      resim: "./img/icecekler/ayran300.jpg", 
+      fiyat: "40₺", 
+      malzemeler: [], 
+    },
+    { 
+      isim: "Şalgam Acılı", 
+      resim: "./img/icecekler/salgamAcili.jpg", 
+      fiyat: "30₺", 
+      malzemeler: [], 
+    },
+    { 
+      isim: "Şalgam Acısız", 
+      resim: "./img/icecekler/salgamAcisiz.jpg", 
+      fiyat: "30₺", 
+      malzemeler: [], 
+    },
 
 
 

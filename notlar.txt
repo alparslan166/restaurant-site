@@ -114,3 +114,42 @@ ayran(büyük)
 
 
 
+
+#main-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 15px;
+  padding: 20px;
+}
+.product-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #8f7126;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.product-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.product-card img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+.product-info {
+  padding: 10px;
+  text-align: center;
+  color: #f9f5e8; /* 🔥 daha açık ve okunaklı */
+}
+.product-info p {
+  margin: 3px 0;
+  font-weight: 500;
+  font-size: 18px;
+}
+.product-info .price {
+  color: #ffebe0;
+  font-weight: 700;
+}
