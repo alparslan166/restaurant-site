@@ -21,8 +21,8 @@ export const kategoriVerisi = {
 
   pizzalar: [
     { 
-      isim: "Margarita", 
-      resim: "./img/pizza3.jpeg", 
+      isim: "Margarita Pizza", 
+      resim: "./img/pizzalar/pizzaMargarita.jpg", 
       fiyat: "90₺", 
       malzemeler: ["Domates", "Mozzarella", "Fesleğen"], 
       extras: [
@@ -31,16 +31,66 @@ export const kategoriVerisi = {
         { isim: "Ekstra Salata", fiyat: "10₺", resim: "./img/salata.jpeg" }
       ]
     },
+
+
     { 
-      isim: "Pepperoni", 
-      resim: "./img/pizza2.jpeg", 
+      isim: "Pepperoni Pizza", 
+      resim: "./img/pizzalar/pizzaPepperoni.jpeg", 
       fiyat: "110₺", 
       malzemeler: ["Pepperoni", "Mozzarella", "Domates"], 
       extras: [
         { isim: "Ekstra Peynir", fiyat: "10₺", resim: "./img/peynir.jpg" },
         { isim: "Patates Kızartması", fiyat: "15₺", resim: "./img/patates.jpeg" }
       ]
-    }
+    },
+
+
+    { 
+      isim: "Karışık Pizza", 
+      resim: "./img/pizzalar/pizzaKarisik.jpg", 
+      fiyat: "110₺", 
+      malzemeler: ["Pepperoni", "Mozzarella", "Domates", "Mozzarella"], 
+      extras: [
+        { isim: "Ekstra Peynir", fiyat: "10₺", resim: "./img/peynir.jpg" },
+        { isim: "Patates Kızartması", fiyat: "15₺", resim: "./img/patates.jpeg" }
+      ]
+    },
+
+    { 
+      isim: "Jambonlu Pizza", 
+      resim: "./img/pizzalar/pizzaJambon.jpg", 
+      fiyat: "110₺", 
+      malzemeler: ["Pepperoni", "Mozzarella", "Domates"], 
+      extras: [
+        { isim: "Ekstra Peynir", fiyat: "10₺", resim: "./img/peynir.jpg" },
+        { isim: "Patates Kızartması", fiyat: "15₺", resim: "./img/patates.jpeg" }
+      ]
+    },
+
+    { 
+      isim: "Muriana Pizza", 
+      resim: "./img/pizzalar/pizzaMuriana.jpg", 
+      fiyat: "110₺", 
+      malzemeler: ["Pepperoni", "Mozzarella", "Domates"], 
+      extras: [
+        { isim: "Çıtır Peynir", fiyat: "10₺", resim: "./img/citirPeynir.jpeg" },
+        { isim: "Patates Kızartması", fiyat: "15₺", resim: "./img/patates.jpeg" }
+      ]
+    },
+
+    { 
+      isim: "Puglia Pizza", 
+      resim: "./img/pizzalar/pizzaPuglia.jpg", 
+      fiyat: "110₺", 
+      malzemeler: ["Pepperoni", "Mozzarella", "Domates"], 
+      extras: [
+        { isim: "Ekstra Peynir", fiyat: "10₺", resim: "./img/peynir.jpg" },
+        { isim: "Patates Kızartması", fiyat: "15₺", resim: "./img/patates.jpeg" }
+      ]
+    },
+
+
+
   ],
 
 
@@ -60,6 +110,11 @@ export const kategoriVerisi = {
       ]
     }
   ],
+
+
+
+
+
   icecekler: [
     { 
       isim: "Kola", 
