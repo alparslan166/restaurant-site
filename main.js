@@ -37,7 +37,7 @@ setInterval(() => {
 
 // ================= KATEGORİLER =================
 const categoryButtons = document.querySelectorAll('.categories button');
-var currentCategory = "pizzalar";
+var currentCategory = "favoriler";
 
 categoryButtons.forEach(btn => {
   btn.addEventListener('click', () => {
