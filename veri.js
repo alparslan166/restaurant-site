@@ -348,20 +348,20 @@ export const kategoriVerisi = {
 
     { 
       isim: "Patates Kızartması", 
-      resim: "./img/salatalar/patates.jpeg", 
+      resim: "./img/ekstralar/patates.jpeg", 
       fiyat: "150₺", 
       malzemeler: ["Patates"],  
     },
     { 
       isim: "Peynir", 
-      resim: "./img/salatalar/peynir.jpg", 
+      resim: "./img/ekstralar/peynir.jpg", 
       fiyat: "150₺", 
       malzemeler: ["Seçtiğiniz Peynir"],  
     },
 
     { 
       isim: "Soğan Halkası", 
-      resim: "./img/salatalar/sogan.jpeg", 
+      resim: "./img/ekstralar/sogan.jpeg", 
       fiyat: "150₺", 
       malzemeler: ["Çıtır Dış Kaplama", "Soğan"],  
     },
