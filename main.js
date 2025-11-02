@@ -180,7 +180,8 @@ function renderDetail(item) {
 
   // Geri butonu
   const backBtn = mainContent.querySelector(".back-btn");
-  backBtn.addEventListener("click", () => renderMain(currentCategory));
+  backBtn.addEventListener("click", () => renderMain(currentCategory), window.scrollTo(0, 0));
+
 
   // Ekstra ürün butonları (varsa)
   const extrasButtons = mainContent.querySelectorAll(".extra-option");
