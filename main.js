@@ -229,20 +229,6 @@ window.addEventListener("scroll", () => {
 
 
 
-
-// ================= SAYFA BAŞLANGICI =================
-// let currentCategory = "favoriler";
-window.scrollTo(0, 0);
-
-renderMain("icecekler");
-
-// Favoriler butonu aktif görünsün
-document
-  .querySelector('.categories button[data-category="icecekler"]')
-  ?.classList.add('active');
-
-
-
 const infoBanner = document.getElementById('info-banner');
 
 categoryButtons.forEach(btn => {
@@ -256,10 +242,31 @@ categoryButtons.forEach(btn => {
       infoBanner.textContent = '🍰 Bütün tatlılar 70 TL!';
       infoBanner.style.display = 'block';
       requestAnimationFrame(() => infoBanner.classList.add('show'));
+
+    // 🍀 Favoriler için ekledik
+    } else if (btn.dataset.category === 'favoriler') {
+      infoBanner.textContent = '⭐️ EN ÇOK SATANLAR!!';
+      infoBanner.style.display = 'block';
+      requestAnimationFrame(() => infoBanner.classList.add('show'));
+
     } else {
       infoBanner.classList.remove('show');
       setTimeout(() => (infoBanner.style.display = 'none'), 400);
     }
-
   });
 });
+
+
+
+
+// ================= SAYFA BAŞLANGICI =================
+// let currentCategory = "favoriler";
+window.scrollTo(0, 0);
+
+renderMain("favoriler");
+
+// Favoriler butonu aktif görünsün
+document
+  .querySelector('.categories button[data-category="favoriler"]')
+  ?.classList.add('active');
+
