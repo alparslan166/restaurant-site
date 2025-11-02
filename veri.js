@@ -26,11 +26,11 @@ export const kategoriVerisi = {
       fiyat: "250₺", 
       malzemeler: ["Domates", "Mozzarella", "Fesleğen"], 
       extras: [
-        { isim: "Ekstra Patates", fiyat: "15₺", resim: "./img/patates.jpeg" },
-        { isim: "Soğan Halkası", fiyat: "12₺", resim: "./img/sogan.jpeg" },
-        { isim: "Çıtır Peynir", fiyat: "10₺", resim: "./img/citirPeynir.jpeg" },
-        { isim: "Ekstra Peynir", fiyat: "10₺", resim: "./img/peynir.jpg" },
-        { isim: "Ekstra Salata", fiyat: "10₺", resim: "./img/salata.jpeg" }
+        { isim: "Ekstra Patates", fiyat: "15₺", resim: "./img/ekstralar/patates.jpeg" },
+        { isim: "Soğan Halkası", fiyat: "12₺", resim: "./img/ekstralar/sogan.jpeg" },
+        { isim: "Çıtır Peynir", fiyat: "10₺", resim: "./img/ekstralar/citirPeynir.jpeg" },
+        { isim: "Ekstra Peynir", fiyat: "10₺", resim: "./img/ekstralar/peynir.jpg" },
+        { isim: "Ekstra Salata", fiyat: "10₺", resim: "./img/ekstralar/salata.jpeg" }
       ]
     },
 
@@ -41,11 +41,11 @@ export const kategoriVerisi = {
       fiyat: "370₺", 
       malzemeler: ["Pepperoni", "Mozzarella", "Domates"], 
       extras: [
-        { isim: "Ekstra Patates", fiyat: "15₺", resim: "./img/patates.jpeg" },
-        { isim: "Soğan Halkası", fiyat: "12₺", resim: "./img/sogan.jpeg" },
-        { isim: "Çıtır Peynir", fiyat: "10₺", resim: "./img/citirPeynir.jpeg" },
-        { isim: "Ekstra Peynir", fiyat: "10₺", resim: "./img/peynir.jpg" },
-        { isim: "Ekstra Salata", fiyat: "10₺", resim: "./img/salata.jpeg" }
+        { isim: "Ekstra Patates", fiyat: "15₺", resim: "./img/ekstralar/patates.jpeg" },
+        { isim: "Soğan Halkası", fiyat: "12₺", resim: "./img/ekstralar/sogan.jpeg" },
+        { isim: "Çıtır Peynir", fiyat: "10₺", resim: "./img/ekstralar/citirPeynir.jpeg" },
+        { isim: "Ekstra Peynir", fiyat: "10₺", resim: "./img/ekstralar/peynir.jpg" },
+        { isim: "Ekstra Salata", fiyat: "10₺", resim: "./img/ekstralar/salata.jpeg" }
       ]
     },
 
@@ -56,11 +56,11 @@ export const kategoriVerisi = {
       fiyat: "300₺", 
       malzemeler: ["Pepperoni", "Mozzarella", "Domates", "Mozzarella"], 
       extras: [
-        { isim: "Ekstra Patates", fiyat: "15₺", resim: "./img/patates.jpeg" },
-        { isim: "Soğan Halkası", fiyat: "12₺", resim: "./img/sogan.jpeg" },
-        { isim: "Çıtır Peynir", fiyat: "10₺", resim: "./img/citirPeynir.jpeg" },
-        { isim: "Ekstra Peynir", fiyat: "10₺", resim: "./img/peynir.jpg" },
-        { isim: "Ekstra Salata", fiyat: "10₺", resim: "./img/salata.jpeg" }
+        { isim: "Ekstra Patates", fiyat: "15₺", resim: "./img/ekstralar/patates.jpeg" },
+        { isim: "Soğan Halkası", fiyat: "12₺", resim: "./img/ekstralar/sogan.jpeg" },
+        { isim: "Çıtır Peynir", fiyat: "10₺", resim: "./img/ekstralar/citirPeynir.jpeg" },
+        { isim: "Ekstra Peynir", fiyat: "10₺", resim: "./img/ekstralar/peynir.jpg" },
+        { isim: "Ekstra Salata", fiyat: "10₺", resim: "./img/ekstralar/salata.jpeg" }
       ]
     },
 
@@ -70,11 +70,11 @@ export const kategoriVerisi = {
       fiyat: "510₺", 
       malzemeler: ["Pepperoni", "Mozzarella", "Domates"], 
       extras: [
-        { isim: "Ekstra Patates", fiyat: "15₺", resim: "./img/patates.jpeg" },
-        { isim: "Soğan Halkası", fiyat: "12₺", resim: "./img/sogan.jpeg" },
-        { isim: "Çıtır Peynir", fiyat: "10₺", resim: "./img/citirPeynir.jpeg" },
-        { isim: "Ekstra Peynir", fiyat: "10₺", resim: "./img/peynir.jpg" },
-        { isim: "Ekstra Salata", fiyat: "10₺", resim: "./img/salata.jpeg" }
+        { isim: "Ekstra Patates", fiyat: "15₺", resim: "./img/ekstralar/patates.jpeg" },
+        { isim: "Soğan Halkası", fiyat: "12₺", resim: "./img/ekstralar/sogan.jpeg" },
+        { isim: "Çıtır Peynir", fiyat: "10₺", resim: "./img/ekstralar/citirPeynir.jpeg" },
+        { isim: "Ekstra Peynir", fiyat: "10₺", resim: "./img/ekstralar/peynir.jpg" },
+        { isim: "Ekstra Salata", fiyat: "10₺", resim: "./img/ekstralar/salata.jpeg" }
       ]
     },
 
@@ -84,11 +84,11 @@ export const kategoriVerisi = {
       fiyat: "450₺", 
       malzemeler: ["Pepperoni", "Mozzarella", "Domates"], 
       extras: [
-        { isim: "Ekstra Patates", fiyat: "15₺", resim: "./img/patates.jpeg" },
-        { isim: "Soğan Halkası", fiyat: "12₺", resim: "./img/sogan.jpeg" },
-        { isim: "Çıtır Peynir", fiyat: "10₺", resim: "./img/citirPeynir.jpeg" },
-        { isim: "Ekstra Peynir", fiyat: "10₺", resim: "./img/peynir.jpg" },
-        { isim: "Ekstra Salata", fiyat: "10₺", resim: "./img/salata.jpeg" }
+        { isim: "Ekstra Patates", fiyat: "15₺", resim: "./img/ekstralar/patates.jpeg" },
+        { isim: "Soğan Halkası", fiyat: "12₺", resim: "./img/ekstralar/sogan.jpeg" },
+        { isim: "Çıtır Peynir", fiyat: "10₺", resim: "./img/ekstralar/citirPeynir.jpeg" },
+        { isim: "Ekstra Peynir", fiyat: "10₺", resim: "./img/ekstralar/peynir.jpg" },
+        { isim: "Ekstra Salata", fiyat: "10₺", resim: "./img/ekstralar/salata.jpeg" }
       ]
     },
 
@@ -98,11 +98,11 @@ export const kategoriVerisi = {
       fiyat: "375₺", 
       malzemeler: ["Pepperoni", "Mozzarella", "Domates"], 
       extras: [
-        { isim: "Ekstra Patates", fiyat: "15₺", resim: "./img/patates.jpeg" },
-        { isim: "Soğan Halkası", fiyat: "12₺", resim: "./img/sogan.jpeg" },
-        { isim: "Çıtır Peynir", fiyat: "10₺", resim: "./img/citirPeynir.jpeg" },
-        { isim: "Ekstra Peynir", fiyat: "10₺", resim: "./img/peynir.jpg" },
-        { isim: "Ekstra Salata", fiyat: "10₺", resim: "./img/salata.jpeg" }
+        { isim: "Ekstra Patates", fiyat: "15₺", resim: "./img/ekstralar/patates.jpeg" },
+        { isim: "Soğan Halkası", fiyat: "12₺", resim: "./img/ekstralar/sogan.jpeg" },
+        { isim: "Çıtır Peynir", fiyat: "10₺", resim: "./img/ekstralar/citirPeynir.jpeg" },
+        { isim: "Ekstra Peynir", fiyat: "10₺", resim: "./img/ekstralar/peynir.jpg" },
+        { isim: "Ekstra Salata", fiyat: "10₺", resim: "./img/ekstralar/salata.jpeg" }
       ]
     },
 
@@ -112,11 +112,11 @@ export const kategoriVerisi = {
       fiyat: "250₺", 
       malzemeler: ["Domates", "Mozzarella", "Fesleğen"], 
       extras: [
-        { isim: "Ekstra Patates", fiyat: "15₺", resim: "./img/patates.jpeg" },
-        { isim: "Soğan Halkası", fiyat: "12₺", resim: "./img/sogan.jpeg" },
-        { isim: "Çıtır Peynir", fiyat: "10₺", resim: "./img/citirPeynir.jpeg" },
-        { isim: "Ekstra Peynir", fiyat: "10₺", resim: "./img/peynir.jpg" },
-        { isim: "Ekstra Salata", fiyat: "10₺", resim: "./img/salata.jpeg" }
+        { isim: "Ekstra Patates", fiyat: "15₺", resim: "./img/ekstralar/patates.jpeg" },
+        { isim: "Soğan Halkası", fiyat: "12₺", resim: "./img/ekstralar/sogan.jpeg" },
+        { isim: "Çıtır Peynir", fiyat: "10₺", resim: "./img/ekstralar/citirPeynir.jpeg" },
+        { isim: "Ekstra Peynir", fiyat: "10₺", resim: "./img/ekstralar/peynir.jpg" },
+        { isim: "Ekstra Salata", fiyat: "10₺", resim: "./img/ekstralar/salata.jpeg" }
       ]
     },
 
@@ -127,11 +127,11 @@ export const kategoriVerisi = {
       fiyat: "370₺", 
       malzemeler: ["Pepperoni", "Mozzarella", "Domates"], 
       extras: [
-        { isim: "Ekstra Patates", fiyat: "15₺", resim: "./img/patates.jpeg" },
-        { isim: "Soğan Halkası", fiyat: "12₺", resim: "./img/sogan.jpeg" },
-        { isim: "Çıtır Peynir", fiyat: "10₺", resim: "./img/citirPeynir.jpeg" },
-        { isim: "Ekstra Peynir", fiyat: "10₺", resim: "./img/peynir.jpg" },
-        { isim: "Ekstra Salata", fiyat: "10₺", resim: "./img/salata.jpeg" }
+        { isim: "Ekstra Patates", fiyat: "15₺", resim: "./img/ekstralar/patates.jpeg" },
+        { isim: "Soğan Halkası", fiyat: "12₺", resim: "./img/ekstralar/sogan.jpeg" },
+        { isim: "Çıtır Peynir", fiyat: "10₺", resim: "./img/ekstralar/citirPeynir.jpeg" },
+        { isim: "Ekstra Peynir", fiyat: "10₺", resim: "./img/ekstralar/peynir.jpg" },
+        { isim: "Ekstra Salata", fiyat: "10₺", resim: "./img/ekstralar/salata.jpeg" }
       ]
     },
 
@@ -142,11 +142,11 @@ export const kategoriVerisi = {
       fiyat: "300₺", 
       malzemeler: ["Pepperoni", "Mozzarella", "Domates", "Mozzarella"], 
       extras: [
-        { isim: "Ekstra Patates", fiyat: "15₺", resim: "./img/patates.jpeg" },
-        { isim: "Soğan Halkası", fiyat: "12₺", resim: "./img/sogan.jpeg" },
-        { isim: "Çıtır Peynir", fiyat: "10₺", resim: "./img/citirPeynir.jpeg" },
-        { isim: "Ekstra Peynir", fiyat: "10₺", resim: "./img/peynir.jpg" },
-        { isim: "Ekstra Salata", fiyat: "10₺", resim: "./img/salata.jpeg" }
+        { isim: "Ekstra Patates", fiyat: "15₺", resim: "./img/ekstralar/patates.jpeg" },
+        { isim: "Soğan Halkası", fiyat: "12₺", resim: "./img/ekstralar/sogan.jpeg" },
+        { isim: "Çıtır Peynir", fiyat: "10₺", resim: "./img/ekstralar/citirPeynir.jpeg" },
+        { isim: "Ekstra Peynir", fiyat: "10₺", resim: "./img/ekstralar/peynir.jpg" },
+        { isim: "Ekstra Salata", fiyat: "10₺", resim: "./img/ekstralar/salata.jpeg" }
       ]
     },
 
@@ -156,11 +156,11 @@ export const kategoriVerisi = {
       fiyat: "510₺", 
       malzemeler: ["Pepperoni", "Mozzarella", "Domates"], 
       extras: [
-        { isim: "Ekstra Patates", fiyat: "15₺", resim: "./img/patates.jpeg" },
-        { isim: "Soğan Halkası", fiyat: "12₺", resim: "./img/sogan.jpeg" },
-        { isim: "Çıtır Peynir", fiyat: "10₺", resim: "./img/citirPeynir.jpeg" },
-        { isim: "Ekstra Peynir", fiyat: "10₺", resim: "./img/peynir.jpg" },
-        { isim: "Ekstra Salata", fiyat: "10₺", resim: "./img/salata.jpeg" }
+        { isim: "Ekstra Patates", fiyat: "15₺", resim: "./img/ekstralar/patates.jpeg" },
+        { isim: "Soğan Halkası", fiyat: "12₺", resim: "./img/ekstralar/sogan.jpeg" },
+        { isim: "Çıtır Peynir", fiyat: "10₺", resim: "./img/ekstralar/citirPeynir.jpeg" },
+        { isim: "Ekstra Peynir", fiyat: "10₺", resim: "./img/ekstralar/peynir.jpg" },
+        { isim: "Ekstra Salata", fiyat: "10₺", resim: "./img/ekstralar/salata.jpeg" }
       ]
     },
 
@@ -170,11 +170,11 @@ export const kategoriVerisi = {
       fiyat: "450₺", 
       malzemeler: ["Pepperoni", "Mozzarella", "Domates"], 
       extras: [
-        { isim: "Ekstra Patates", fiyat: "15₺", resim: "./img/patates.jpeg" },
-        { isim: "Soğan Halkası", fiyat: "12₺", resim: "./img/sogan.jpeg" },
-        { isim: "Çıtır Peynir", fiyat: "10₺", resim: "./img/citirPeynir.jpeg" },
-        { isim: "Ekstra Peynir", fiyat: "10₺", resim: "./img/peynir.jpg" },
-        { isim: "Ekstra Salata", fiyat: "10₺", resim: "./img/salata.jpeg" }
+        { isim: "Ekstra Patates", fiyat: "15₺", resim: "./img/ekstralar/patates.jpeg" },
+        { isim: "Soğan Halkası", fiyat: "12₺", resim: "./img/ekstralar/sogan.jpeg" },
+        { isim: "Çıtır Peynir", fiyat: "10₺", resim: "./img/ekstralar/citirPeynir.jpeg" },
+        { isim: "Ekstra Peynir", fiyat: "10₺", resim: "./img/ekstralar/peynir.jpg" },
+        { isim: "Ekstra Salata", fiyat: "10₺", resim: "./img/ekstralar/salata.jpeg" }
       ]
     },
 
@@ -184,11 +184,11 @@ export const kategoriVerisi = {
       fiyat: "375₺", 
       malzemeler: ["Pepperoni", "Mozzarella", "Domates"], 
       extras: [
-        { isim: "Ekstra Patates", fiyat: "15₺", resim: "./img/patates.jpeg" },
-        { isim: "Soğan Halkası", fiyat: "12₺", resim: "./img/sogan.jpeg" },
-        { isim: "Çıtır Peynir", fiyat: "10₺", resim: "./img/citirPeynir.jpeg" },
-        { isim: "Ekstra Peynir", fiyat: "10₺", resim: "./img/peynir.jpg" },
-        { isim: "Ekstra Salata", fiyat: "10₺", resim: "./img/salata.jpeg" }
+        { isim: "Ekstra Patates", fiyat: "15₺", resim: "./img/ekstralar/patates.jpeg" },
+        { isim: "Soğan Halkası", fiyat: "12₺", resim: "./img/ekstralar/sogan.jpeg" },
+        { isim: "Çıtır Peynir", fiyat: "10₺", resim: "./img/ekstralar/citirPeynir.jpeg" },
+        { isim: "Ekstra Peynir", fiyat: "10₺", resim: "./img/ekstralar/peynir.jpg" },
+        { isim: "Ekstra Salata", fiyat: "10₺", resim: "./img/ekstralar/salata.jpeg" }
       ]
     },
 
@@ -209,11 +209,11 @@ export const kategoriVerisi = {
       fiyat: "230₺", 
       malzemeler: ["Et", "Peynir", "Marul", "Domates"], 
       extras: [
-        { isim: "Ekstra Patates", fiyat: "15₺", resim: "./img/patates.jpeg" },
-        { isim: "Soğan Halkası", fiyat: "12₺", resim: "./img/sogan.jpeg" },
-        { isim: "Çıtır Peynir", fiyat: "10₺", resim: "./img/citirPeynir.jpeg" },
-        { isim: "Ekstra Peynir", fiyat: "10₺", resim: "./img/peynir.jpg" },
-        { isim: "Ekstra Salata", fiyat: "10₺", resim: "./img/salata.jpeg" }
+        { isim: "Ekstra Patates", fiyat: "15₺", resim: "./img/ekstralar/patates.jpeg" },
+        { isim: "Soğan Halkası", fiyat: "12₺", resim: "./img/ekstralar/sogan.jpeg" },
+        { isim: "Çıtır Peynir", fiyat: "10₺", resim: "./img/ekstralar/citirPeynir.jpeg" },
+        { isim: "Ekstra Peynir", fiyat: "10₺", resim: "./img/ekstralar/peynir.jpg" },
+        { isim: "Ekstra Salata", fiyat: "10₺", resim: "./img/ekstralar/salata.jpeg" }
       ]
     },
 
@@ -223,11 +223,11 @@ export const kategoriVerisi = {
       fiyat: "150₺", 
       malzemeler: ["Et", "Peynir", "Marul", "Domates"], 
       extras: [
-        { isim: "Ekstra Patates", fiyat: "15₺", resim: "./img/patates.jpeg" },
-        { isim: "Soğan Halkası", fiyat: "12₺", resim: "./img/sogan.jpeg" },
-        { isim: "Çıtır Peynir", fiyat: "10₺", resim: "./img/citirPeynir.jpeg" },
-        { isim: "Ekstra Peynir", fiyat: "10₺", resim: "./img/peynir.jpg" },
-        { isim: "Ekstra Salata", fiyat: "10₺", resim: "./img/salata.jpeg" }
+        { isim: "Ekstra Patates", fiyat: "15₺", resim: "./img/ekstralar/patates.jpeg" },
+        { isim: "Soğan Halkası", fiyat: "12₺", resim: "./img/ekstralar/sogan.jpeg" },
+        { isim: "Çıtır Peynir", fiyat: "10₺", resim: "./img/ekstralar/citirPeynir.jpeg" },
+        { isim: "Ekstra Peynir", fiyat: "10₺", resim: "./img/ekstralar/peynir.jpg" },
+        { isim: "Ekstra Salata", fiyat: "10₺", resim: "./img/ekstralar/salata.jpeg" }
       ]
     },
 
@@ -237,11 +237,11 @@ export const kategoriVerisi = {
       fiyat: "120₺", 
       malzemeler: ["Et", "Peynir", "Marul", "Domates"], 
       extras: [
-        { isim: "Ekstra Patates", fiyat: "15₺", resim: "./img/patates.jpeg" },
-        { isim: "Soğan Halkası", fiyat: "12₺", resim: "./img/sogan.jpeg" },
-        { isim: "Çıtır Peynir", fiyat: "10₺", resim: "./img/citirPeynir.jpeg" },
-        { isim: "Ekstra Peynir", fiyat: "10₺", resim: "./img/peynir.jpg" },
-        { isim: "Ekstra Salata", fiyat: "10₺", resim: "./img/salata.jpeg" }
+        { isim: "Ekstra Patates", fiyat: "15₺", resim: "./img/ekstralar/patates.jpeg" },
+        { isim: "Soğan Halkası", fiyat: "12₺", resim: "./img/ekstralar/sogan.jpeg" },
+        { isim: "Çıtır Peynir", fiyat: "10₺", resim: "./img/ekstralar/citirPeynir.jpeg" },
+        { isim: "Ekstra Peynir", fiyat: "10₺", resim: "./img/ekstralar/peynir.jpg" },
+        { isim: "Ekstra Salata", fiyat: "10₺", resim: "./img/ekstralar/salata.jpeg" }
       ]
     },
 
@@ -251,11 +251,11 @@ export const kategoriVerisi = {
       fiyat: "180₺", 
       malzemeler: ["Et", "Peynir", "Marul", "Domates"], 
       extras: [
-        { isim: "Ekstra Patates", fiyat: "15₺", resim: "./img/patates.jpeg" },
-        { isim: "Soğan Halkası", fiyat: "12₺", resim: "./img/sogan.jpeg" },
-        { isim: "Çıtır Peynir", fiyat: "10₺", resim: "./img/citirPeynir.jpeg" },
-        { isim: "Ekstra Peynir", fiyat: "10₺", resim: "./img/peynir.jpg" },
-        { isim: "Ekstra Salata", fiyat: "10₺", resim: "./img/salata.jpeg" }
+        { isim: "Ekstra Patates", fiyat: "15₺", resim: "./img/ekstralar/patates.jpeg" },
+        { isim: "Soğan Halkası", fiyat: "12₺", resim: "./img/ekstralar/sogan.jpeg" },
+        { isim: "Çıtır Peynir", fiyat: "10₺", resim: "./img/ekstralar/citirPeynir.jpeg" },
+        { isim: "Ekstra Peynir", fiyat: "10₺", resim: "./img/ekstralar/peynir.jpg" },
+        { isim: "Ekstra Salata", fiyat: "10₺", resim: "./img/ekstralar/salata.jpeg" }
       ]
     },
 
@@ -265,11 +265,11 @@ export const kategoriVerisi = {
       fiyat: "200₺", 
       malzemeler: ["Et", "Peynir", "Marul", "Domates"], 
       extras: [
-        { isim: "Ekstra Patates", fiyat: "15₺", resim: "./img/patates.jpeg" },
-        { isim: "Soğan Halkası", fiyat: "12₺", resim: "./img/sogan.jpeg" },
-        { isim: "Çıtır Peynir", fiyat: "10₺", resim: "./img/citirPeynir.jpeg" },
-        { isim: "Ekstra Peynir", fiyat: "10₺", resim: "./img/peynir.jpg" },
-        { isim: "Ekstra Salata", fiyat: "10₺", resim: "./img/salata.jpeg" }
+        { isim: "Ekstra Patates", fiyat: "15₺", resim: "./img/ekstralar/patates.jpeg" },
+        { isim: "Soğan Halkası", fiyat: "12₺", resim: "./img/ekstralar/sogan.jpeg" },
+        { isim: "Çıtır Peynir", fiyat: "10₺", resim: "./img/ekstralar/citirPeynir.jpeg" },
+        { isim: "Ekstra Peynir", fiyat: "10₺", resim: "./img/ekstralar/peynir.jpg" },
+        { isim: "Ekstra Salata", fiyat: "10₺", resim: "./img/ekstralar/salata.jpeg" }
       ]
     },
 
