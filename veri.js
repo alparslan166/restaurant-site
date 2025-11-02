@@ -314,6 +314,13 @@ export const kategoriVerisi = {
       resim: "./img/salatalar/salataRus.jpg", 
       fiyat: "150₺", 
       malzemeler: ["Klasik Rus Salatası", "Patates", "Mısır", "Salatalık", "Domates", "Mayonez", "Yoğurt"],  
+      extras: [
+        { isim: "Ekstra Patates", fiyat: "15₺", resim: "./img/ekstralar/patates.jpeg" },
+        { isim: "Soğan Halkası", fiyat: "12₺", resim: "./img/ekstralar/sogan.jpeg" },
+        { isim: "Çıtır Peynir", fiyat: "10₺", resim: "./img/ekstralar/citirPeynir.jpeg" },
+        { isim: "Ekstra Peynir", fiyat: "10₺", resim: "./img/ekstralar/peynir.jpg" },
+        { isim: "Ekstra Salata", fiyat: "10₺", resim: "./img/ekstralar/salata.jpeg" }
+      ]
     },
 
 
