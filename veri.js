@@ -53,7 +53,7 @@ export const kategoriVerisi = {
     { 
       isim: "Karışık Pizza", 
       resim: "./img/pizzalar/pizzaKarisik.jpg", 
-      fiyat: "3000₺", 
+      fiyat: "300₺", 
       malzemeler: ["Pepperoni", "Mozzarella", "Domates", "Mozzarella"], 
       extras: [
         { isim: "Ekstra Patates", fiyat: "15₺", resim: "./img/patates.jpeg" },
@@ -116,16 +116,80 @@ export const kategoriVerisi = {
 
 
   hamburgerler: [
+    
     { 
       isim: "Cheeseburger", 
-      resim: "./img/burger1.jpg", 
-      fiyat: "70₺", 
+      resim: "./img/burgerler/burgerCheese.jpg", 
+      fiyat: "230₺", 
       malzemeler: ["Et", "Peynir", "Marul", "Domates"], 
       extras: [
+        { isim: "Ekstra Patates", fiyat: "15₺", resim: "./img/patates.jpeg" },
+        { isim: "Soğan Halkası", fiyat: "12₺", resim: "./img/sogan.jpeg" },
+        { isim: "Çıtır Peynir", fiyat: "10₺", resim: "./img/citirPeynir.jpeg" },
         { isim: "Ekstra Peynir", fiyat: "10₺", resim: "./img/peynir.jpg" },
-        { isim: "Soğan Halkası", fiyat: "12₺", resim: "./img/sogan.jpg" }
+        { isim: "Ekstra Salata", fiyat: "10₺", resim: "./img/salata.jpeg" }
       ]
-    }
+    },
+
+    { 
+      isim: "Tandır Burger", 
+      resim: "./img/burgerler/burgerTandır.jpg", 
+      fiyat: "150₺", 
+      malzemeler: ["Et", "Peynir", "Marul", "Domates"], 
+      extras: [
+        { isim: "Ekstra Patates", fiyat: "15₺", resim: "./img/patates.jpeg" },
+        { isim: "Soğan Halkası", fiyat: "12₺", resim: "./img/sogan.jpeg" },
+        { isim: "Çıtır Peynir", fiyat: "10₺", resim: "./img/citirPeynir.jpeg" },
+        { isim: "Ekstra Peynir", fiyat: "10₺", resim: "./img/peynir.jpg" },
+        { isim: "Ekstra Salata", fiyat: "10₺", resim: "./img/salata.jpeg" }
+      ]
+    },
+
+    { 
+      isim: "Islak Hamburger", 
+      resim: "./img/burgerler/burgerIslak.jpg", 
+      fiyat: "120₺", 
+      malzemeler: ["Et", "Peynir", "Marul", "Domates"], 
+      extras: [
+        { isim: "Ekstra Patates", fiyat: "15₺", resim: "./img/patates.jpeg" },
+        { isim: "Soğan Halkası", fiyat: "12₺", resim: "./img/sogan.jpeg" },
+        { isim: "Çıtır Peynir", fiyat: "10₺", resim: "./img/citirPeynir.jpeg" },
+        { isim: "Ekstra Peynir", fiyat: "10₺", resim: "./img/peynir.jpg" },
+        { isim: "Ekstra Salata", fiyat: "10₺", resim: "./img/salata.jpeg" }
+      ]
+    },
+
+    { 
+      isim: "Colorado Burger", 
+      resim: "./img/burgerler/burgerColorado.jpg", 
+      fiyat: "180₺", 
+      malzemeler: ["Et", "Peynir", "Marul", "Domates"], 
+      extras: [
+        { isim: "Ekstra Patates", fiyat: "15₺", resim: "./img/patates.jpeg" },
+        { isim: "Soğan Halkası", fiyat: "12₺", resim: "./img/sogan.jpeg" },
+        { isim: "Çıtır Peynir", fiyat: "10₺", resim: "./img/citirPeynir.jpeg" },
+        { isim: "Ekstra Peynir", fiyat: "10₺", resim: "./img/peynir.jpg" },
+        { isim: "Ekstra Salata", fiyat: "10₺", resim: "./img/salata.jpeg" }
+      ]
+    },
+
+    { 
+      isim: "Vejeteryan Burger", 
+      resim: "./img/burgerler/burgerVejeteryan.jpg", 
+      fiyat: "200₺", 
+      malzemeler: ["Et", "Peynir", "Marul", "Domates"], 
+      extras: [
+        { isim: "Ekstra Patates", fiyat: "15₺", resim: "./img/patates.jpeg" },
+        { isim: "Soğan Halkası", fiyat: "12₺", resim: "./img/sogan.jpeg" },
+        { isim: "Çıtır Peynir", fiyat: "10₺", resim: "./img/citirPeynir.jpeg" },
+        { isim: "Ekstra Peynir", fiyat: "10₺", resim: "./img/peynir.jpg" },
+        { isim: "Ekstra Salata", fiyat: "10₺", resim: "./img/salata.jpeg" }
+      ]
+    },
+
+
+
+
   ],
 
 
