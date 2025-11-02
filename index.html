@@ -41,6 +41,23 @@
 </div>
 
 
+<!-- Kategorilerin hemen üstüne -->
+<div id="info-banner" style="
+  display:none;
+  text-align:center;
+  background:rgba(255, 225, 105, 0.9);
+  color:#402d1f;
+  font-weight:600;
+  font-size:1rem;
+  padding:10px;
+  border-radius:8px;
+  margin:8px 10px;
+  box-shadow:0 2px 8px rgba(0,0,0,0.15);
+">
+</div>
+
+
+
   <main id="main-content">
   <!-- JS ile ürünler buraya eklenecek -->
    
@@ -77,6 +94,25 @@
     </div>
   </div>
 </footer>
+
+<script>
+const categoryButtons = document.querySelectorAll('.categories button');
+const infoBanner = document.getElementById('info-banner');
+
+categoryButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    // Önce eski yazıyı gizle
+    infoBanner.style.display = 'none';
+    infoBanner.textContent = '';
+
+    // Eğer tıklanan buton tatlılar ise göster
+    if (btn.textContent.trim().toLowerCase() === 'tatlılar') {
+      infoBanner.textContent = '🍰 Bütün tatlılar 70 TL!';
+      infoBanner.style.display = 'block';
+    }
+  });
+});
+</script>
 
 
   <script type="module"  src="./main.js"></script>

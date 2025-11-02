@@ -1079,3 +1079,9 @@ bu blok ile değiştirin veya sadece aşağıdaki tanımı koruyun. */
   object-fit: contain;
   vertical-align: middle;
 }
+#info-banner {
+  transition: opacity 0.3s ease-in-out;
+}
+#info-banner[style*="display: block"] {
+  opacity: 1;
+}

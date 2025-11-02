@@ -337,8 +337,34 @@ export const kategoriVerisi = {
 
 
   atıştırmalıklar:[
+    //! ekstralar kısmından alınıyor (aynı şeyler)
 
+    { 
+      isim: "Çıtır Peynir", 
+      resim: "./img/ekstralar/citirPeynir.jpeg", 
+      fiyat: "70₺", 
+      malzemeler: ["Çıtır Dış Kaplama", "Akışkan Peynir"],  
+    },
 
+    { 
+      isim: "Patates Kızartması", 
+      resim: "./img/salatalar/patates.jpeg", 
+      fiyat: "150₺", 
+      malzemeler: ["Patates"],  
+    },
+    { 
+      isim: "Peynir", 
+      resim: "./img/salatalar/peynir.jpg", 
+      fiyat: "150₺", 
+      malzemeler: ["Seçtiğiniz Peynir"],  
+    },
+
+    { 
+      isim: "Soğan Halkası", 
+      resim: "./img/salatalar/sogan.jpeg", 
+      fiyat: "150₺", 
+      malzemeler: ["Çıtır Dış Kaplama", "Soğan"],  
+    },
 
 
 
@@ -352,6 +378,43 @@ export const kategoriVerisi = {
 
 
   tatlılar:[
+     { 
+      isim: "Sütlaç", 
+      resim: "./img/ekstralar/sutlac.jpeg", 
+      fiyat: "70₺", 
+      malzemeler: ["Çıtır Dış Kaplama", "Akışkan Peynir"],  
+    },
+     { 
+      isim: "Süt Helvası", 
+      resim: "./img/ekstralar/sutHelvasi.jpeg", 
+      fiyat: "70₺", 
+      malzemeler: ["Çıtır Dış Kaplama", "Akışkan Peynir"],  
+    },
+     { 
+      isim: "Tiramisu", 
+      resim: "./img/ekstralar/tiramisu.jpeg", 
+      fiyat: "70₺", 
+      malzemeler: ["Çıtır Dış Kaplama", "Akışkan Peynir"],  
+    },
+     { 
+      isim: "Puding", 
+      resim: "./img/ekstralar/puding.jpg", 
+      fiyat: "70₺", 
+      malzemeler: ["Seçtiğiniz Aromalı Puding", "Çikolatalı", "Muzlu", "Çilekli", "Vanilyalı"],  
+    },
+     { 
+      isim: "Supangle", 
+      resim: "./img/ekstralar/citirPeynir.jpeg", 
+      fiyat: "70₺", 
+      malzemeler: ["Çıtır Dış Kaplama", "Akışkan Peynir"],  
+    },
+     { 
+      isim: "Trileçe", 
+      resim: "./img/ekstralar/citirPeynir.jpeg", 
+      fiyat: "70₺", 
+      malzemeler: ["Seçtiğiniz Aromalı Trileçe", "Çikolatalı", "Karamelli", "Çilekli", "Vanilyalı"],  
+    },
+
 
 
 
