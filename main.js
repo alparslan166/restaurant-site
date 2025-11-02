@@ -230,3 +230,25 @@ document
   .querySelector('.categories button[data-category="icecekler"]')
   ?.classList.add('active');
 
+
+
+const infoBanner = document.getElementById('info-banner');
+
+categoryButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    // Önce eski yazıyı gizle
+    infoBanner.style.display = 'none';
+    infoBanner.textContent = '';
+
+    // Eğer tıklanan buton tatlılar ise göster
+    if (btn.dataset.category === 'tatlilar') {
+      infoBanner.textContent = '🍰 Bütün tatlılar 70 TL!';
+      infoBanner.style.display = 'block';
+      requestAnimationFrame(() => infoBanner.classList.add('show'));
+    } else {
+      infoBanner.classList.remove('show');
+      setTimeout(() => (infoBanner.style.display = 'none'), 400);
+    }
+
+  });
+});
