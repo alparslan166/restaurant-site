@@ -282,22 +282,39 @@ export const kategoriVerisi = {
 
 
 
-  icecekler: [
-    { 
-      isim: "Kola", 
-      resim: "./img/icecek1.jpg", 
-      fiyat: "15₺", 
-      malzemeler: ["Karbonatlı su", "Şeker"], 
-      extras: []
-    }
-  ],
-
-
-
 
 
 
   salatalar:[
+
+
+    { 
+      isim: "Brokoli Salatası", 
+      resim: "./img/salatalar/salataBrokoli.jpg", 
+      fiyat: "150₺", 
+      malzemeler: ["Salatalık", "Domates", "Brokoli", "Yoğurt"],  
+    },
+
+    { 
+      isim: "Havuç Salatası", 
+      resim: "./img/salatalar/salataHavuc.jpg", 
+      fiyat: "150₺", 
+      malzemeler: ["Salatalık", "Domates", "Havuç", "Yoğurt"],  
+    },
+
+    { 
+      isim: "Peynir Salatası", 
+      resim: "./img/salatalar/salataPeynir.jpg", 
+      fiyat: "150₺", 
+      malzemeler: ["Salatalık", "Domates", "Brokoli", "Yoğurt"],  
+    },
+
+    { 
+      isim: "Rus Salatası", 
+      resim: "./img/salatalar/salataRus.jpg", 
+      fiyat: "150₺", 
+      malzemeler: ["Klasik Rus Salatası", "Patates", "Mısır", "Salatalık", "Domates", "Mayonez", "Yoğurt"],  
+    },
 
 
 
@@ -340,6 +357,16 @@ export const kategoriVerisi = {
 
 
   içecekler:[
+    
+    { 
+      isim: "Kola", 
+      resim: "./img/icecek1.jpg", 
+      fiyat: "15₺", 
+      malzemeler: ["Karbonatlı su", "Şeker"], 
+      extras: []
+    },
+
+
 
 
 
