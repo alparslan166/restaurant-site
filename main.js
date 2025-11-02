@@ -223,10 +223,10 @@ window.addEventListener("scroll", () => {
 // let currentCategory = "favoriler";
 window.scrollTo(0, 0);
 
-renderMain("pizzalar");
+renderMain("icecekler");
 
 // Favoriler butonu aktif görünsün
 document
-  .querySelector('.categories button[data-category="pizzalar"]')
+  .querySelector('.categories button[data-category="icecekler"]')
   ?.classList.add('active');
 
