@@ -108,10 +108,15 @@ categoryButtons.forEach(btn => {
     infoBanner.textContent = '';
 
     // Eğer tıklanan buton tatlılar ise göster
-    if (btn.textContent.trim().toLowerCase() === 'tatlılar') {
+    if (btn.dataset.category === 'tatlilar') {
       infoBanner.textContent = '🍰 Bütün tatlılar 70 TL!';
       infoBanner.style.display = 'block';
+      requestAnimationFrame(() => infoBanner.classList.add('show'));
+    } else {
+      infoBanner.classList.remove('show');
+      setTimeout(() => (infoBanner.style.display = 'none'), 400);
     }
+
   });
 });
 </script>
