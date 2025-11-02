@@ -45,6 +45,11 @@ categoryButtons.forEach(btn => {
     categoryButtons.forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
     renderMain(currentCategory);
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+
   });
 });
 
