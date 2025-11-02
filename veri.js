@@ -404,13 +404,13 @@ export const kategoriVerisi = {
     },
      { 
       isim: "Supangle", 
-      resim: "./img/ekstralar/citirPeynir.jpeg", 
+      resim: "./img/ekstralar/supangle.jpeg", 
       fiyat: "70₺", 
       malzemeler: ["Çıtır Dış Kaplama", "Akışkan Peynir"],  
     },
      { 
       isim: "Trileçe", 
-      resim: "./img/ekstralar/citirPeynir.jpeg", 
+      resim: "./img/ekstralar/trilece.jpeg", 
       fiyat: "70₺", 
       malzemeler: ["Seçtiğiniz Aromalı Trileçe", "Çikolatalı", "Karamelli", "Çilekli", "Vanilyalı"],  
     },
