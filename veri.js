@@ -453,7 +453,7 @@ export const kategoriVerisi = {
     },
     { 
       isim: "Coca Cola Zero 330ml", 
-      resim: "./img/icecekler/cocaCola0330.png", 
+      resim: "./img/icecekler/cocaCola0330.jpg", 
       fiyat: "50₺", 
       malzemeler: [], 
     },
