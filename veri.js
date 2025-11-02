@@ -336,7 +336,7 @@ export const kategoriVerisi = {
 
 
 
-  atıştırmalıklar:[
+  atiştirmaliklar:[
     //! ekstralar kısmından alınıyor (aynı şeyler)
 
     { 
@@ -377,7 +377,7 @@ export const kategoriVerisi = {
 
 
 
-  tatlılar:[
+  tatlilar:[
      { 
       isim: "Sütlaç", 
       resim: "./img/tatlilar/sutlac.jpeg", 
