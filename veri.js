@@ -22,7 +22,7 @@ export const kategoriVerisi = {
   pizzalar: [
     { 
       isim: "Margarita Pizza", 
-      resim: "./img/pizzalar/pizzaMargarita.jpeg", 
+      resim: "./img/pizzalar/pizzaMargarita.jpg", 
       fiyat: "250₺", 
       malzemeler: ["Domates", "Mozzarella", "Fesleğen"], 
       extras: [
@@ -37,7 +37,7 @@ export const kategoriVerisi = {
 
     { 
       isim: "Pepperoni Pizza", 
-      resim: "./img/pizzalar/pizzaPepperoni.jpeg", 
+      resim: "./img/pizzalar/pizzaPepperoni.jpg", 
       fiyat: "370₺", 
       malzemeler: ["Pepperoni", "Mozzarella", "Domates"], 
       extras: [
