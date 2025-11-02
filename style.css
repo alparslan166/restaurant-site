@@ -171,43 +171,117 @@ header {
 /* ========================================= */
 /* ÜRÜN KARTLARI */
 /* ========================================= */
+
+/* ========================================= */
+/* ÜRÜN KARTLARI — TAM MOBİL UYUMLU */
+/* ========================================= */
 #main-content {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   gap: 15px;
   padding: 20px;
+  box-sizing: border-box;
 }
+
+/* KARTLAR */
 .product-card {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   background-color: #8f7126;
   border-radius: 12px;
   overflow: hidden;
   cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  min-height: 230px;
 }
+
 .product-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
+
+/* GÖRSELLER */
 .product-card img {
   width: 100%;
-  height: 120px;
+  height: 160px;
   object-fit: cover;
+  display: block;
 }
+
+/* YAZI ALANI */
 .product-info {
   padding: 10px;
   text-align: center;
-  color: #f9f5e8; /* 🔥 daha açık ve okunaklı */
+  color: #f9f5e8;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
+
 .product-info p {
-  margin: 3px 0;
+  margin: 4px 0;
   font-weight: 500;
-  font-size: 18px;
+  font-size: clamp(14px, 3vw, 18px);
+  line-height: 1.3;
 }
+
 .product-info .price {
   color: #ffebe0;
   font-weight: 700;
+}
+
+/* ========================================= */
+/* RESPONSIVE AYARLAR */
+/* ========================================= */
+
+/* Tablet boyutları (2 sütun) */
+@media (max-width: 992px) {
+  #main-content {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 14px;
+    padding: 16px;
+  }
+  .product-card img {
+    height: 150px;
+  }
+}
+
+/* Mobil boyutları (1 sütun veya 2 küçük sütun) */
+@media (max-width: 600px) {
+  #main-content {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 12px;
+    padding: 12px;
+  }
+
+  .product-card {
+    min-height: 210px;
+  }
+
+  .product-card img {
+    height: 140px;
+  }
+
+  .product-info p {
+    font-size: 15px;
+  }
+}
+
+/* Çok küçük ekranlar (tek sütun tam genişlik) */
+@media (max-width: 400px) {
+  #main-content {
+    grid-template-columns: 1fr;
+  }
+
+  .product-card img {
+    height: 180px;
+  }
+
+  .product-info p {
+    font-size: 16px;
+  }
 }
 
 /* ========================================= */
