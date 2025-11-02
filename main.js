@@ -182,7 +182,10 @@ function renderDetail(item) {
   const backBtn = mainContent.querySelector(".back-btn");
   backBtn.addEventListener("click", () => {
   renderMain(currentCategory);
-  window.scrollTo(0, 0);
+  window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
   });
 
 
