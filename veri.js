@@ -336,7 +336,7 @@ export const kategoriVerisi = {
 
 
 
-  atiştirmaliklar:[
+  atistirmaliklar:[
     //! ekstralar kısmından alınıyor (aynı şeyler)
 
     { 
@@ -380,21 +380,21 @@ export const kategoriVerisi = {
   tatlilar:[
      { 
       isim: "Sütlaç", 
-      resim: "./img/tatlilar/sutlac.jpeg", 
+      resim: "./img/tatlilar/sutlac.jpg", 
       fiyat: "70₺", 
-      malzemeler: ["Çıtır Dış Kaplama", "Akışkan Peynir"],  
+      malzemeler: ["Orijinal İnek Sütü"],  
     },
      { 
       isim: "Süt Helvası", 
-      resim: "./img/tatlilar/sutHelvasi.jpeg", 
+      resim: "./img/tatlilar/sutHelvasi.jpg", 
       fiyat: "70₺", 
-      malzemeler: ["Çıtır Dış Kaplama", "Akışkan Peynir"],  
+      malzemeler: ["Orijinal İnek Sütü"],  
     },
      { 
       isim: "Tiramisu", 
-      resim: "./img/tatlilar/tiramisu.jpeg", 
+      resim: "./img/tatlilar/tiramisu.jpg", 
       fiyat: "70₺", 
-      malzemeler: ["Çıtır Dış Kaplama", "Akışkan Peynir"],  
+      malzemeler: ["Orijinal İnek Sütü", "Özel Kolombiya Kakaosu"],  
     },
      { 
       isim: "Puding", 
@@ -404,13 +404,13 @@ export const kategoriVerisi = {
     },
      { 
       isim: "Supangle", 
-      resim: "./img/tatlilar/supangle.jpeg", 
+      resim: "./img/tatlilar/supangle.jpg", 
       fiyat: "70₺", 
-      malzemeler: ["Çıtır Dış Kaplama", "Akışkan Peynir"],  
+      malzemeler: ["Orijinal İnek Sütü"],  
     },
      { 
       isim: "Trileçe", 
-      resim: "./img/tatlilar/trilece.jpeg", 
+      resim: "./img/tatlilar/trilece.jpg", 
       fiyat: "70₺", 
       malzemeler: ["Seçtiğiniz Aromalı Trileçe", "Çikolatalı", "Karamelli", "Çilekli", "Vanilyalı"],  
     },
@@ -426,7 +426,7 @@ export const kategoriVerisi = {
 
 
 
-  içecekler:[
+  icecekler:[
     
     { 
       isim: "Kola", 
