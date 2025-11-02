@@ -455,7 +455,7 @@ export const kategoriVerisi = {
       isim: "Coca Cola Zero 330ml", 
       resim: "./img/icecekler/cocaCola0330.jpg", 
       fiyat: "50₺", 
-    //   malzemeler: [], 
+      malzemeler: [], 
     },
     { 
       isim: "Fanta 250ml", 

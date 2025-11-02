@@ -163,8 +163,11 @@ function renderDetail(item) {
         <h2 class="product-name">${item.isim}</h2>
         <p class="price">${item.fiyat}</p>
 
-        <h3 class="section-title">Malzemeler:</h3>
-        <ul class="malzemeler-list">${malzemeListesi}</ul>
+        ${currentCategory !== "icecekler" && item.malzemeler && item.malzemeler.length > 0 ? `
+          <h3 class="section-title">Malzemeler:</h3>
+          <ul class="malzemeler-list">${malzemeListesi}</ul>
+        ` : ""}
+
 
         ${extras.length > 0 ? `
           <h3 class="section-title">Ekstra Seçenekler:</h3>
