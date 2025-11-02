@@ -380,37 +380,37 @@ export const kategoriVerisi = {
   tatlılar:[
      { 
       isim: "Sütlaç", 
-      resim: "./img/ekstralar/sutlac.jpeg", 
+      resim: "./img/tatlilar/sutlac.jpeg", 
       fiyat: "70₺", 
       malzemeler: ["Çıtır Dış Kaplama", "Akışkan Peynir"],  
     },
      { 
       isim: "Süt Helvası", 
-      resim: "./img/ekstralar/sutHelvasi.jpeg", 
+      resim: "./img/tatlilar/sutHelvasi.jpeg", 
       fiyat: "70₺", 
       malzemeler: ["Çıtır Dış Kaplama", "Akışkan Peynir"],  
     },
      { 
       isim: "Tiramisu", 
-      resim: "./img/ekstralar/tiramisu.jpeg", 
+      resim: "./img/tatlilar/tiramisu.jpeg", 
       fiyat: "70₺", 
       malzemeler: ["Çıtır Dış Kaplama", "Akışkan Peynir"],  
     },
      { 
       isim: "Puding", 
-      resim: "./img/ekstralar/puding.jpg", 
+      resim: "./img/tatlilar/puding.jpg", 
       fiyat: "70₺", 
       malzemeler: ["Seçtiğiniz Aromalı Puding", "Çikolatalı", "Muzlu", "Çilekli", "Vanilyalı"],  
     },
      { 
       isim: "Supangle", 
-      resim: "./img/ekstralar/supangle.jpeg", 
+      resim: "./img/tatlilar/supangle.jpeg", 
       fiyat: "70₺", 
       malzemeler: ["Çıtır Dış Kaplama", "Akışkan Peynir"],  
     },
      { 
       isim: "Trileçe", 
-      resim: "./img/ekstralar/trilece.jpeg", 
+      resim: "./img/tatlilar/trilece.jpeg", 
       fiyat: "70₺", 
       malzemeler: ["Seçtiğiniz Aromalı Trileçe", "Çikolatalı", "Karamelli", "Çilekli", "Vanilyalı"],  
     },
