@@ -6,6 +6,8 @@ import { kategoriVerisi } from './veri.js';
 const slides = document.querySelector('.slides');
 const images = document.querySelectorAll('.slides img');
 const dotsContainer = document.querySelector('.dots');
+const prevBtn = document.querySelector('.prev');
+const nextBtn = document.querySelector('.next');
 let index = 0;
 
 // Dot'ları dinamik oluştur
