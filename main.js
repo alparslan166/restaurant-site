@@ -55,6 +55,50 @@ slides.addEventListener('mouseleave', () => {
 
 });
 
+// 🎯 Telefon (Dokunmatik) Kaydırma Desteği
+
+slides.addEventListener('touchstart', e => {
+  // Çoklu dokunmayı (multi-touch) yoksaymak için:
+  if (e.touches.length > 1) return; 
+  
+  isDragging = true;
+  // İlk dokunuşun yatay (X) koordinatını kaydet
+  startX = e.touches[0].clientX; 
+  
+  // Sürükleme sırasında anlık geçişi (transition) kapat, 
+  // böylece kaydırma akıcı görünür
+  slides.style.transition = 'none'; 
+});
+
+slides.addEventListener('touchmove', e => {
+  if (!isDragging || e.touches.length > 1) return;
+
+  const currentX = e.touches[0].clientX;
+  const diff = currentX - startX;
+  
+  // Sürükleme hareketini görsele yansıt
+  // Mevcut slayt konumuna farkı ekleyerek gerçek zamanlı hareket sağlar
+  slides.style.transform = `translateX(${(-index * 100) + (diff / slides.offsetWidth) * 100}%)`;
+});
+
+slides.addEventListener('touchend', e => {
+  if (!isDragging) return;
+  
+  isDragging = false;
+  
+  // startX, touchstart olayından alınan ilk dokunuş X pozisyonudur.
+  // Son X pozisyonu, touchend olayı e.changedTouches[0].clientX ile alınır.
+  const diff = e.changedTouches[0].clientX - startX;
+  
+  // 50 piksel eşiğini fare (mouse) olayındaki gibi kullan
+  if (Math.abs(diff) > 50) { 
+    if (diff > 0) showSlide(index - 1); // Sağa kaydırma (bir önceki slayt)
+    else showSlide(index + 1);      // Sola kaydırma (bir sonraki slayt)
+  } else {
+    // Eşik geçilemezse, slaytı mevcut konumuna geri getir (eski haline döndür)
+    showSlide(index); 
+  }
+});
 //!-----------------__-___---------
 
 // ================= KATEGORİLER =================
