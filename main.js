@@ -14,13 +14,15 @@ images.forEach((_, i) => {
 });
 const dots = document.querySelectorAll('.dots span');
 
-// Slider gösterme fonksiyonu
+let startX = 0;
+let isDragging = false;
+
 function showSlide(i) {
   if (i < 0) index = images.length - 1;
   else if (i >= images.length) index = 0;
   else index = i;
 
-  slides.style.transition = "transform 0.8s ease-in-out"; // yumuşak geçiş
+  slides.style.transition = "transform 0.8s ease-in-out";
   slides.style.transform = `translateX(${-index * 100}%)`;
 
   dots.forEach(dot => dot.classList.remove('active'));
@@ -32,8 +34,41 @@ setInterval(() => {
   showSlide(index + 1);
 }, 5000);
 
+// 🎯 Dokunmatik ve mouse sürükleme desteği
+slides.addEventListener('mousedown', e => {
+  isDragging = true;
+  startX = e.pageX;
+});
 
-// 🔥 Mobil dokunma kaydırma desteği
+slides.addEventListener('mouseup', e => {
+  if (!isDragging) return;
+  isDragging = false;
+  const diff = e.pageX - startX;
+  if (Math.abs(diff) > 50) { // eşik: 50px
+    if (diff > 0) showSlide(index - 1);
+    else showSlide(index + 1);
+  }
+});
+
+slides.addEventListener('mouseleave', () => {
+  isDragging = false;
+});
+
+// 🔹 Dokunmatik cihaz desteği
+slides.addEventListener('touchstart', e => {
+  startX = e.touches[0].clientX;
+});
+
+slides.addEventListener('touchend', e => {
+  const endX = e.changedTouches[0].clientX;
+  const diff = endX - startX;
+  if (Math.abs(diff) > 50) {
+    if (diff > 0) showSlide(index - 1);
+    else showSlide(index + 1);
+  }
+});
+
+
 
 // ================= KATEGORİLER =================
 const categoryButtons = document.querySelectorAll('.categories button');
@@ -81,59 +116,7 @@ function renderMain(category) {
 
 
 // ================= DETAY SAYFASI =================
-// function renderDetail(item) {
-//   mainContent.innerHTML = "";
 
-//   const malzemeListesi = item.malzemeler
-//     .map(m => `<li class="malzeme-item">${m}</li>`)
-//     .join("");
-
-//   const extrasListesi = item.extras.length > 0 
-//     ? item.extras.map(e => `
-//       <div class="extra-option">
-//         <img src="${e.resim}" alt="${e.isim}">
-//         <span class="extra-name">${e.isim}</span>
-//         <span class="extra-price">${e.fiyat}</span>
-//       </div>
-//     `).join("")
-//     : "<p class='no-extra'>Bu ürün için ekstra seçenek bulunmamaktadır.</p>";
-
-//   const detailHTML = `
-//     <div class="product-detail">
-//       <img src="${item.resim}" alt="${item.isim}" class="product-image">
-//       <div class="product-info">
-//         <h2 class="product-name">${item.isim}</h2>
-//         <p class="price">${item.fiyat}</p>
-
-//         <h3 class="section-title">Malzemeler:</h3>
-//         <ul class="malzemeler-list">${malzemeListesi}</ul>
-
-//         <h3 class="section-title">Ekstra Seçenekler:</h3>
-//         <div class="extras-container">${extrasListesi}</div>
-
-//         <button class="back-btn" aria-label="Geri Dön">Geri</button>
-//       </div>
-//     </div>
-//   `;
-
-//   mainContent.innerHTML = detailHTML;
-
-//   // Geri butonu
-//   const backBtn = mainContent.querySelector(".back-btn");
-//   backBtn.addEventListener("click", () => renderMain(currentCategory));
-
-//   // Ekstra ürün butonları (tıklama efekti)
-//   const extrasButtons = mainContent.querySelectorAll(".extra-option");
-//   extrasButtons.forEach(btn => {
-//     btn.addEventListener("click", () => {
-//       btn.classList.toggle("selected");
-//       btn.style.backgroundColor = btn.classList.contains("selected")
-//         ? "#ffeef3"
-//         : "#fafafa";
-//     });
-//   });
-//    mainContent.scrollIntoView({ behavior: "smooth", block: "start" });
-// }
 
 function renderDetail(item) {
   mainContent.innerHTML = "";
