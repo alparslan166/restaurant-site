@@ -14,10 +14,60 @@ images.forEach((_, i) => {
 });
 const dots = document.querySelectorAll('.dots span');
 //! ------------------------------------
+// let startX = 0;
+// let isDragging = false;
+
+// function showSlide(i) {
+//   if (i < 0) index = images.length - 1;
+//   else if (i >= images.length) index = 0;
+//   else index = i;
+
+//   slides.style.transition = "transform 0.8s ease-in-out";
+//   slides.style.transform = `translateX(${-index * 100}%)`;
+
+//   dots.forEach(dot => dot.classList.remove('active'));
+//   dots[index].classList.add('active');
+// }
+
+// // Otomatik geçiş (5 saniye)
+// setInterval(() => {
+//   showSlide(index + 1);
+// }, 5000);
+
+// // 🎯 Dokunmatik ve mouse sürükleme desteği
+// slides.addEventListener('mousedown', e => {
+//   isDragging = true;
+//   startX = e.pageX;
+// });
+
+// slides.addEventListener('mouseup', e => {
+//   if (!isDragging) return;
+//   isDragging = false;
+//   const diff = e.pageX - startX;
+//   if (Math.abs(diff) > 50) { // eşik: 50px
+//     if (diff > 0) showSlide(index - 1);
+//     else showSlide(index + 1);
+//   }
+// });
+
+// slides.addEventListener('mouseleave', () => {
+//   isDragging = false;
+
+// });
+
 
 let startX = 0;
 let isDragging = false;
 let autoSlide;
+
+// Noktaları oluştur
+images.forEach((_, i) => {
+  const dot = document.createElement("span");
+  if (i === 0) dot.classList.add("active");
+  dotsContainer.appendChild(dot);
+});
+
+dots = dotsContainer.querySelectorAll("span");
 
 function showSlide(i) {
   if (i < 0) index = images.length - 1;
@@ -27,70 +77,39 @@ function showSlide(i) {
   slides.style.transition = "transform 0.6s ease-in-out";
   slides.style.transform = `translateX(${-index * 100}%)`;
 
-  dots.forEach(dot => dot.classList.remove('active'));
-  dots[index].classList.add('active');
+  dots.forEach(dot => dot.classList.remove("active"));
+  dots[index].classList.add("active");
 }
 
+// Otomatik kayma
 function startAutoSlide() {
   autoSlide = setInterval(() => showSlide(index + 1), 5000);
 }
-
 function stopAutoSlide() {
   clearInterval(autoSlide);
 }
-
 startAutoSlide();
 
-// 🎯 Dokunmatik & Mouse sürükleme
-slides.addEventListener('touchstart', e => {
+// Dokunmatik sürükleme (MOBİL)
+slides.addEventListener("touchstart", e => {
   stopAutoSlide();
   startX = e.touches[0].clientX;
   isDragging = true;
+  slides.style.transition = "none";
 });
 
-slides.addEventListener('touchmove', e => {
+slides.addEventListener("touchmove", e => {
   if (!isDragging) return;
   const moveX = e.touches[0].clientX;
   const diff = moveX - startX;
-  slides.style.transition = "none";
   slides.style.transform = `translateX(${-index * 100 + (diff / slides.clientWidth) * 100}%)`;
 });
 
-slides.addEventListener('touchend', e => {
+slides.addEventListener("touchend", e => {
   if (!isDragging) return;
   isDragging = false;
-
   const endX = e.changedTouches[0].clientX;
   const diff = endX - startX;
-
-  if (Math.abs(diff) > 30) { // daha duyarlı eşik
-    if (diff > 0) showSlide(index - 1);
-    else showSlide(index + 1);
-  } else {
-    showSlide(index);
-  }
-
-  startAutoSlide();
-});
-
-// 💻 Mouse desteği (opsiyonel)
-slides.addEventListener('mousedown', e => {
-  stopAutoSlide();
-  startX = e.pageX;
-  isDragging = true;
-});
-
-slides.addEventListener('mousemove', e => {
-  if (!isDragging) return;
-  const diff = e.pageX - startX;
-  slides.style.transition = "none";
-  slides.style.transform = `translateX(${-index * 100 + (diff / slides.clientWidth) * 100}%)`;
-});
-
-slides.addEventListener('mouseup', e => {
-  if (!isDragging) return;
-  isDragging = false;
-  const diff = e.pageX - startX;
 
   if (Math.abs(diff) > 30) {
     if (diff > 0) showSlide(index - 1);
@@ -98,14 +117,37 @@ slides.addEventListener('mouseup', e => {
   } else {
     showSlide(index);
   }
-
   startAutoSlide();
 });
 
-slides.addEventListener('mouseleave', () => (isDragging = false));
+// Mouse sürükleme (isteğe bağlı)
+slides.addEventListener("mousedown", e => {
+  stopAutoSlide();
+  startX = e.pageX;
+  isDragging = true;
+  slides.style.transition = "none";
+});
 
+slides.addEventListener("mousemove", e => {
+  if (!isDragging) return;
+  const diff = e.pageX - startX;
+  slides.style.transform = `translateX(${-index * 100 + (diff / slides.clientWidth) * 100}%)`;
+});
 
+slides.addEventListener("mouseup", e => {
+  if (!isDragging) return;
+  isDragging = false;
+  const diff = e.pageX - startX;
+  if (Math.abs(diff) > 30) {
+    if (diff > 0) showSlide(index - 1);
+    else showSlide(index + 1);
+  } else {
+    showSlide(index);
+  }
+  startAutoSlide();
+});
 
+slides.addEventListener("mouseleave", () => (isDragging = false));
 
 
 //!-----------------__-___---------
