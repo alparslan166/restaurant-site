@@ -1,5 +1,7 @@
 import { kategoriVerisi } from './veri.js';
 
+//! ------------------------------------
+
 // ================= SLIDER =================
 const slides = document.querySelector('.slides');
 const images = document.querySelectorAll('.slides img');
@@ -13,7 +15,7 @@ images.forEach((_, i) => {
   dotsContainer.appendChild(dot);
 });
 const dots = document.querySelectorAll('.dots span');
-//! ------------------------------------
+
 let startX = 0;
 let isDragging = false;
 
@@ -34,71 +36,8 @@ setInterval(() => {
   showSlide(index + 1);
 }, 5000);
 
-// 🎯 Dokunmatik ve mouse sürükleme desteği
-slides.addEventListener('mousedown', e => {
-  isDragging = true;
-  startX = e.pageX;
-});
-
-slides.addEventListener('mouseup', e => {
-  if (!isDragging) return;
-  isDragging = false;
-  const diff = e.pageX - startX;
-  if (Math.abs(diff) > 30) { // eşik: 50px
-    if (diff > 0) showSlide(index - 1);
-    else showSlide(index + 1);
-  }
-});
-
-slides.addEventListener('mouseleave', () => {
-  isDragging = false;
-
-});
-
-// 🎯 Telefon (Dokunmatik) Kaydırma Desteği
-
-slides.addEventListener('touchstart', e => {
-  // Çoklu dokunmayı (multi-touch) yoksaymak için:
-  if (e.touches.length > 1) return; 
-  
-  isDragging = true;
-  // İlk dokunuşun yatay (X) koordinatını kaydet
-  startX = e.touches[0].clientX; 
-  
-  // Sürükleme sırasında anlık geçişi (transition) kapat, 
-  // böylece kaydırma akıcı görünür
-  slides.style.transition = 'none'; 
-});
-
-slides.addEventListener('touchmove', e => {
-  if (!isDragging || e.touches.length > 1) return;
-
-  const currentX = e.touches[0].clientX;
-  const diff = currentX - startX;
-  
-  // Sürükleme hareketini görsele yansıt
-  // Mevcut slayt konumuna farkı ekleyerek gerçek zamanlı hareket sağlar
-  slides.style.transform = `translateX(${(-index * 100) + (diff / slides.offsetWidth) * 100}%)`;
-});
-
-slides.addEventListener('touchend', e => {
-  if (!isDragging) return;
-  
-  isDragging = false;
-  
-  // startX, touchstart olayından alınan ilk dokunuş X pozisyonudur.
-  // Son X pozisyonu, touchend olayı e.changedTouches[0].clientX ile alınır.
-  const diff = e.changedTouches[0].clientX - startX;
-  
-  // 50 piksel eşiğini fare (mouse) olayındaki gibi kullan
-  if (Math.abs(diff) > 30) { 
-    if (diff > 0) showSlide(index - 1); // Sağa kaydırma (bir önceki slayt)
-    else showSlide(index + 1);      // Sola kaydırma (bir sonraki slayt)
-  } else {
-    // Eşik geçilemezse, slaytı mevcut konumuna geri getir (eski haline döndür)
-    showSlide(index); 
-  }
-});
+prevBtn.addEventListener('click', () => showSlide(index - 1));
+nextBtn.addEventListener('click', () => showSlide(index + 1));
 //!-----------------__-___---------
 
 // ================= KATEGORİLER =================
