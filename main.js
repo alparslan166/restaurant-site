@@ -44,7 +44,7 @@ slides.addEventListener('mouseup', e => {
   if (!isDragging) return;
   isDragging = false;
   const diff = e.pageX - startX;
-  if (Math.abs(diff) > 50) { // eşik: 50px
+  if (Math.abs(diff) > 30) { // eşik: 50px
     if (diff > 0) showSlide(index - 1);
     else showSlide(index + 1);
   }
@@ -91,7 +91,7 @@ slides.addEventListener('touchend', e => {
   const diff = e.changedTouches[0].clientX - startX;
   
   // 50 piksel eşiğini fare (mouse) olayındaki gibi kullan
-  if (Math.abs(diff) > 50) { 
+  if (Math.abs(diff) > 30) { 
     if (diff > 0) showSlide(index - 1); // Sağa kaydırma (bir önceki slayt)
     else showSlide(index + 1);      // Sola kaydırma (bir sonraki slayt)
   } else {
