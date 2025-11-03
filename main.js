@@ -13,62 +13,102 @@ images.forEach((_, i) => {
   dotsContainer.appendChild(dot);
 });
 const dots = document.querySelectorAll('.dots span');
+//! ------------------------------------
 
 let startX = 0;
 let isDragging = false;
+let autoSlide;
 
 function showSlide(i) {
   if (i < 0) index = images.length - 1;
   else if (i >= images.length) index = 0;
   else index = i;
 
-  slides.style.transition = "transform 0.8s ease-in-out";
+  slides.style.transition = "transform 0.6s ease-in-out";
   slides.style.transform = `translateX(${-index * 100}%)`;
 
   dots.forEach(dot => dot.classList.remove('active'));
   dots[index].classList.add('active');
 }
 
-// Otomatik geçiş (5 saniye)
-setInterval(() => {
-  showSlide(index + 1);
-}, 5000);
+function startAutoSlide() {
+  autoSlide = setInterval(() => showSlide(index + 1), 5000);
+}
 
-// 🎯 Dokunmatik ve mouse sürükleme desteği
-slides.addEventListener('mousedown', e => {
+function stopAutoSlide() {
+  clearInterval(autoSlide);
+}
+
+startAutoSlide();
+
+// 🎯 Dokunmatik & Mouse sürükleme
+slides.addEventListener('touchstart', e => {
+  stopAutoSlide();
+  startX = e.touches[0].clientX;
   isDragging = true;
+});
+
+slides.addEventListener('touchmove', e => {
+  if (!isDragging) return;
+  const moveX = e.touches[0].clientX;
+  const diff = moveX - startX;
+  slides.style.transition = "none";
+  slides.style.transform = `translateX(${-index * 100 + (diff / slides.clientWidth) * 100}%)`;
+});
+
+slides.addEventListener('touchend', e => {
+  if (!isDragging) return;
+  isDragging = false;
+
+  const endX = e.changedTouches[0].clientX;
+  const diff = endX - startX;
+
+  if (Math.abs(diff) > 30) { // daha duyarlı eşik
+    if (diff > 0) showSlide(index - 1);
+    else showSlide(index + 1);
+  } else {
+    showSlide(index);
+  }
+
+  startAutoSlide();
+});
+
+// 💻 Mouse desteği (opsiyonel)
+slides.addEventListener('mousedown', e => {
+  stopAutoSlide();
   startX = e.pageX;
+  isDragging = true;
+});
+
+slides.addEventListener('mousemove', e => {
+  if (!isDragging) return;
+  const diff = e.pageX - startX;
+  slides.style.transition = "none";
+  slides.style.transform = `translateX(${-index * 100 + (diff / slides.clientWidth) * 100}%)`;
 });
 
 slides.addEventListener('mouseup', e => {
   if (!isDragging) return;
   isDragging = false;
   const diff = e.pageX - startX;
-  if (Math.abs(diff) > 50) { // eşik: 50px
+
+  if (Math.abs(diff) > 30) {
     if (diff > 0) showSlide(index - 1);
     else showSlide(index + 1);
+  } else {
+    showSlide(index);
   }
+
+  startAutoSlide();
 });
 
-slides.addEventListener('mouseleave', () => {
-  isDragging = false;
-});
-
-// 🔹 Dokunmatik cihaz desteği
-slides.addEventListener('touchstart', e => {
-  startX = e.touches[0].clientX;
-});
-
-slides.addEventListener('touchend', e => {
-  const endX = e.changedTouches[0].clientX;
-  const diff = endX - startX;
-  if (Math.abs(diff) > 50) {
-    if (diff > 0) showSlide(index - 1);
-    else showSlide(index + 1);
-  }
-});
+slides.addEventListener('mouseleave', () => (isDragging = false));
 
 
+
+
+
+//!-----------------__-___---------
 
 // ================= KATEGORİLER =================
 const categoryButtons = document.querySelectorAll('.categories button');
